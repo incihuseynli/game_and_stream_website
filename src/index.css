@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* SCROLLBAR STYLE */
 html {
   scroll-behavior: smooth;
 }
@@ -12,9 +13,21 @@ html::-webkit-scrollbar {
 html::-webkit-scrollbar-thumb {
   @apply bg-primary-green-500 w-2 h-8 rounded-2xl;
 }
+
+/* TEXT SELECTION STYLE */
+::-moz-selection {
+  /* Code for Firefox */
+  @apply text-black-500 bg-primary-green-500;
+}
+
+::selection {
+  @apply text-black-500 bg-primary-green-500;
+}
+
 body {
   @apply bg-black-800;
   height: 100vh;
+  position: relative;
 }
 * {
   padding: 0;
