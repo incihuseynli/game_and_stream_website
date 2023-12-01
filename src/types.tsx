@@ -10,3 +10,10 @@ interface Iroute {
 export interface IStyles {
   [key: string]: string;
 }
+// Children type inside Btn component
+import { ReactNode } from "react";
+export interface IBtn {
+  children: ReactNode;
+  path : string;
+}
+
