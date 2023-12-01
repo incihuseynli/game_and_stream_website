@@ -83,6 +83,32 @@ body {
 .btnClip:hover:before {
   @apply bg-white;
 }
+/* GRADIENT BG STYLES */
+.bg-gradient {
+  background: rgb(33, 90, 63);
+  background: linear-gradient(
+    90deg,
+    rgba(33, 90, 63, 1) 0%,
+    rgba(33, 90, 63, 0.4906337535014006) 74%,
+    rgba(33, 90, 63, 0.039653361344537785) 100%
+  );
+}
+/* TEXT SHADOW */
+.text-shadow {
+  text-shadow: 1.5px 3.5px #3fde77;
+}
+.logoShadow {
+  box-shadow: 1px 3px 83px 17px rgba(63, 222, 119, 0.79);
+  -webkit-box-shadow: 1px 3px 83px 17px rgba(63, 222, 119, 0.79);
+  -moz-box-shadow: 1px 3px 83px 17px rgba(63, 222, 119, 0.79);
+}
+.brand:hover {
+  box-shadow: 1px 3px 83px 17px rgba(63, 222, 119, 0.568);
+  -webkit-box-shadow: 1px 3px 83px 17px rgba(63, 222, 119, 0.409);
+  -moz-box-shadow: 1px 3px 83px 17px rgba(63, 222, 119, 0.394);
+  transition: all 0.6s linear;
+}
+
 
 /* ===============  ANIMATIONS =============== */
 
