@@ -5,7 +5,7 @@ import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
 const Footer = () => {
   return (
     <footer
-      className={`${styles.padding} font-poppins
+      className={`${styles.padding} font-poppins mt-14
     grid grid-rows-1 place-items-center gap-16 shadow-lg
     `}
     >
