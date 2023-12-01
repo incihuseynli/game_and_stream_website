@@ -1,11 +1,15 @@
-import React from 'react'
+import Hero from "../components/Hero-Components/Hero";
+import TodaysPick from "../components/Home-Components/TodaysPick";
 
-type Props = {}
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <main>
+      {/* ================================= Hero Section ================================= */}
+      <Hero />
+      {/* ================================= Game of Today Section ================================= */}
+      <TodaysPick/>
+    </main>
+  );
+};
 
-export default Home
+export default Home;
