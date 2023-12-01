@@ -1,10 +1,11 @@
 import NavLinks from "./NavLinks";
-import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
 import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/solid";
 import { styles } from "../../styles";
 import { NavLink } from "react-router-dom";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { useState } from "react";
+import CloseBtn from "../Buttons/CloseBtn";
+import MobileBtn from "../Buttons/MobileBtn";
 
 const Header = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1024px)");
@@ -25,12 +26,7 @@ const Header = () => {
           ) : (
             // Medium and Small Screens Menu
             <div className="relative">
-              <div
-                className="w-12 h-12 mr-8 cursor-pointer text-white hover:text-primary-green-500"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                <Bars3BottomRightIcon />
-              </div>
+              <MobileBtn isOpen={isOpen} setIsOpen={setIsOpen} />
               {/* MOBILE MENU */}
               {isOpen && (
                 <div
@@ -67,12 +63,7 @@ const Header = () => {
                       </div>
                     </div>
                     {/* CLOSE BUTTON */}
-                    <img
-                      src="./closeBtn.svg"
-                      alt=""
-                      className="hover:scale-150 cursor-pointer"
-                      onClick={() => setIsOpen(false)}
-                    />
+                    <CloseBtn setIsOpen={setIsOpen} />
                   </div>
                   {/* MENUS */}
                   <div className={`${styles.flexCenter} flex-col gap-4`}>
