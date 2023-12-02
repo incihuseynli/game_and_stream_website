@@ -17,3 +17,8 @@ export interface IBtn {
   path : string;
 }
 
+// Section Head Component's Props 
+export interface ISHead{
+  headTitle : string;
+  title : string
+}
