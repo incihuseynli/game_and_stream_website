@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "test",
+      "email": "test@example.com",
+      "birthDate": "20.06.2000",
+      "followers": 5,
+      "following": 213
+    },
+    {
+      "username": "test2",
+      "password": "123456",
+      "email": "test2@examle.com",
+      "birthDate": "2009-02-20",
+      "id": 2
+    }
+  ]
+}

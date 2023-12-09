@@ -1,6 +1,33 @@
 import { EyeSlashIcon } from "@heroicons/react/24/solid";
+import Axios from "axios";
+import { useState } from "react";
 
 const RegisterSect = () => {
+  interface IUser{
+    email:string;
+  }
+  const [username, setUsername] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [birthDate, setBirthDate] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    const existingUsers = JSON.parse(localStorage.getItem("users") || "[]");
+    const isUserExist = existingUsers.some(
+      (user:IUser) => user.email === email
+    );
+
+    // For already existed users
+    if (isUserExist) {
+      console.log("User already exists");
+      return;
+    }
+    // Adding New User
+    const newUser = { username, password, email, birthDate };
+    localStorage.setItem("users", JSON.stringify([...existingUsers, newUser]));
+    await Axios.post("http://localhost:5000/users", newUser);
+  
+  };
   return (
     <section className="border border-gray-500 border-opacity-20 p-8 flex flex-col gap-4 shadow-xl">
       <h4 className="text-3xl font-barlow font-bold uppercase text-white">
@@ -10,43 +37,51 @@ const RegisterSect = () => {
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto,
         facilis.
       </p>
-      <form className="flex flex-col gap-6 ">
+      <form className="flex flex-col gap-6 " onSubmit={handleRegister}>
         <input
           type="email"
           placeholder="Email *"
-          className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white"
+          className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide  text-white"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="text"
           placeholder="Username *"
           className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
         <input
           type="date"
           placeholder="Birth Date *"
           className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white"
+          value={birthDate}
+          onChange={(e) => setBirthDate(e.target.value)}
         />
         <div className="w-full flex items-center border border-gray-400 border-opacity-20 bg-black-800 rounded-sm outline-none focus-within:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white">
           <input
             type="password"
             placeholder="Password *"
             className="border-none p-4 mr-2 w-full h-full outline-none bg-transparent flex-1"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <EyeSlashIcon className="w-4 h-4 mr-2 text-gray-500" />
         </div>
-        <div className="w-full flex items-center border border-gray-400 border-opacity-20 bg-black-800 rounded-sm outline-none focus-within:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white">
+        {/* <div className="w-full flex items-center border border-gray-400 border-opacity-20 bg-black-800 rounded-sm outline-none focus-within:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white">
           <input
             type="password"
             placeholder="Confirm Password *"
             className="border-none p-4 mr-2 w-full h-full outline-none bg-transparent flex-1"
           />
           <EyeSlashIcon className="w-4 h-4 mr-2 text-gray-500" />
-        </div>
+        </div> */}
         <div className="flex  gap-2">
           <input
             type="checkbox"
             name=""
-            id=""
+            id="policy"
             className="accent-primary-green-300 w-4 h-4"
           />
           <span className="text-sm -mt-1 font-poppins font-medium text-white">
