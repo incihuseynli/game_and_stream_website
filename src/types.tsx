@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 // For Routes
 export type RoutesType = Iroute[];
 interface Iroute {
@@ -11,7 +13,6 @@ export interface IStyles {
   [key: string]: string;
 }
 // Children type inside Btn component
-import { ReactNode } from "react";
 export interface IBtn {
   children: ReactNode;
   path : string;
@@ -21,4 +22,16 @@ export interface IBtn {
 export interface ISHead{
   headTitle : string;
   title : string
+}
+
+export interface IScrollProps {
+  children: ReactNode;
+}
+
+export interface IHoc{
+  children : ReactNode;
+  secTitle : string;
+}
+export interface IChildren {
+  children : ReactNode;
 }
