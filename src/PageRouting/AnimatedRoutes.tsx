@@ -1,13 +1,17 @@
 import { Route, Routes, useLocation } from "react-router";
 import { Paths } from "./Paths";
-import Header from "../components/Header-Components/Header";
+import Navbar from "../components/Header-Components/Navbar.tsx";
 import Footer from "../components/Footer-Components/Footer.tsx";
 const AnimatedRoutes = () => {
   const location = useLocation();
+  const currentRoute = Paths.find((route) => route.path === location.pathname);
+  const showNavbar =
+    currentRoute &&
+    Paths.map(({ title }) => title).includes(currentRoute.title);
   return (
     <>
       {/* HEADER */}
-      <Header />
+      {!showNavbar && <Navbar />}
       {/* ROUTES */}
       <Routes location={location} key={location.pathname}>
         {Paths.map(({ id, path, element }) => {
