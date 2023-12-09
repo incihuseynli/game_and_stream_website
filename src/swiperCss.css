@@ -1,0 +1,42 @@
+.gameListSwiper .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* .swiper {
+  width: 100%;
+  height: 100%;
+} */
+.gameListSwiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 450px;
+  border: 4px solid gray;
+  margin-bottom: 5rem;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mySwiper.gameListSwiper
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  height: 10px;
+  margin-bottom: -2px;
+}
+.mySwiper.gameListSwiper
+.swiper-slide{
+    margin-bottom: 8rem;
+  }
+/*  GLOBAL SLIDER CSS RULES  */
+/* .globalSlider.mySwiper .swiper-slide .swiperHover{
+  transition: all 2s linear;
+} */
+.globalSlider.mySwiper .swiper-slide:hover .swiperHover {
+  display: block;
+  bottom: 1rem;
+}
+/* swiperHover */
