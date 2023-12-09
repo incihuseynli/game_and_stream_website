@@ -22,7 +22,7 @@ const ToTop = () => {
       {icon && (
         <div
           onClick={toUp}
-          className="fixed right-4 bottom-4 w-10 h-10 p-2 rounded-full text-white hover:bg-primary-green-800 bg-primary-green-500"
+          className="fixed right-4 bottom-4 z-50 w-10 h-10 p-2 rounded-full text-white hover:bg-primary-green-800 bg-primary-green-500"
         >
           <ArrowSmallUpIcon />
         </div>
