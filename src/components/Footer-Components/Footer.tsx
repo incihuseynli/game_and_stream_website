@@ -5,9 +5,7 @@ import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
 const Footer = () => {
   return (
     <footer
-      className={`${styles.padding} font-poppins mt-14
-    grid grid-rows-1 place-items-center gap-16 shadow-lg
-    `}
+      className={`bg-black-500 ${styles.paddingX} pt-24 font-poppins mt-14 -mb-6 grid grid-rows-1 place-items-center gap-16`}
     >
       {/* TOP */}
       <div className="grid grid-cols-1 place-items-center items-start sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -99,7 +97,7 @@ const Footer = () => {
       </div>
       {/* Copyrights text */}
       <div
-        className={`${styles.flexBetween} flex-col  sm:flex-row sm:items-start items-center  w-full border-t border-gray-500 py-4`}
+        className={`${styles.flexBetween} flex-col sm:flex-row sm:items-start items-center w-full border-t border-gray-500 py-4`}
       >
         <p className="text-sm text-gray-50 uppercase tracking-wider">
           COPYRIGHT © 2023 - ALL RIGHTS RESERVED.
