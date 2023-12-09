@@ -3,8 +3,17 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero' : 'url("./heroBG.png")',
+        'streamers' : 'url("./bgImg1.png")',
+        'pageHero' : 'url("./bgHero.jpg")',
+        'streamer' : "url('./bgStreamer.jpg')",
+      },
+      gridTemplateColumns: {
+        'browse' : '800px 400px',
+      },
       colors: {
-        "primary-green-300": "",
+        "primary-green-300": "#45f983",
         "primary-green-500": "#3fde77",
         "primary-green-800": "#215a3f",
         "secondary-yellow-500": "#ffbf19",
