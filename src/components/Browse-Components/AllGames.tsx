@@ -1,7 +1,7 @@
 import { styles } from "../../styles";
 import All from "../Global-Components/All";
-import GamesLists from "../Global-Components/GamesLists";
 import SectionHead from "../Global-Components/SectionHead";
+import GameCard from "../Home-Components/GameCard";
 
 const AllGames = () => {
   return (
@@ -14,7 +14,7 @@ const AllGames = () => {
       {/* All Games */}
       <All>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-9 place-items-center py-16 px-4 lg:px-8">
-          <GamesLists />
+          <GameCard />
         </div>
       </All>
     </section>

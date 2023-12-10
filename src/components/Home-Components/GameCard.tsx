@@ -2,22 +2,25 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import { styles } from "../../styles";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import BtnText from "../Buttons/BtnText";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { IGame } from "../../types";
-import Axios from "axios";
+import GamesAPI from "../../api/GamesAPI";
+// import Axios from "axios";
 const GameCard = () => {
   // const limit:string = '6';
-  const options = {
-    method: "GET",
-    // url: `https://free-to-play-games-database.p.rapidapi.com/api/games?_limit=${limit}`,
-    url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
-    headers: {
-      "X-RapidAPI-Key": "8270335a98mshff2fc09f55e7c03p15f4a7jsn3afb95e7043a",
-      "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
-    },
-    
-  };
-  const [games, setGames] = useState<IGame[]>([]);
+  // const options = {
+  //   method: "GET",
+  //   // url: `https://free-to-play-games-database.p.rapidapi.com/api/games?_limit=${limit}`,
+  //   url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
+  //   // params: {
+  //   //   limit: '6'
+  //   // },
+  //   headers: {
+  //     "X-RapidAPI-Key": "8270335a98mshff2fc09f55e7c03p15f4a7jsn3afb95e7043a",
+  //     "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
+  //   },
+  // };
+  // const [games, setGames] = useState<IGame[]>([]);
   // const handleData = async () => {
   //   try {
   //     const response = await Axios.request(options);
@@ -31,32 +34,22 @@ const GameCard = () => {
   //     console.error(error);
   //   }
   // };
-  useEffect(() => {
-    // Axios.get(options.url).then(({ data }) => {
-    //   setGames(data);
-    // });
-    const handleData = async () => {
-      try {
-        const response = await Axios.request(options);
-        // console.log(response.data);
-        // setGames(response.data);
-        const limitedGames = response.data.slice(0, 6);
-        // console.log(limitedGames);
-  
-        setGames(limitedGames);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    handleData();
+  // useEffect(() => {
+  //   // Axios.get(options.url).then(({ data }) => {
+  //   //   setGames(data);
+  //   // });
 
-  }, []);
-// console.log(games);
+  //   handleData();
+  // }, []);
+  // // console.log(games);
 
   // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   return (
-    <>
-      {games.map(({ id, title, thumbnail, publisher, game_url }) => {
+    
+    <GamesAPI limit={6}>
+     {(games:IGame[]) => (
+      <>
+       {games.map(({ id, title, thumbnail, publisher, game_url }) => {
         return (
           <div
             key={id}
@@ -110,7 +103,9 @@ const GameCard = () => {
           </div>
         );
       })}
-    </>
+      </>
+     )}
+    </GamesAPI>
   );
 };
 
