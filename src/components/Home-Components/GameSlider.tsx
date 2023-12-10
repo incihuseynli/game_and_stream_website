@@ -8,7 +8,24 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import "../../swiperCss.css";
 import { styles } from "../../styles";
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { IGame } from "../../types";
+import Axios from "axios";
 const GameSlider = () => {
+  const URL = "http://localhost:3080/games?_limit=6";
+  const [games, setGames] = useState<IGame[]>([]);
+  const handleData = () => {
+    try {
+      Axios.get(URL).then(({ data }) => {
+        setGames(data);
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    handleData();
+  }, []);
   return (
     <section className="my-36">
       <Swiper
@@ -36,44 +53,30 @@ const GameSlider = () => {
           "--swiper-pagination-bullet-inactive-color": "#3fde77",
         }}
       >
-        <SwiperSlide >
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          <div className={`${styles.flexBetween} px-16 md:px-2 pt-4 w-full`}>
-            <NavLink
-              to=""
-              className="font-barlow text-xl uppercase font-bold tracking-wide text-white"
-            >
-              Game Name
-            </NavLink>
-            <span className="font-barlow text-lg uppercase font-semibold tracking-wide text-secondary-yellow-500">
-              RATE 50%
-            </span>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
+        {games.map(({ id, thumbnail, title, ratePer }) => {
+          return (
+            <SwiperSlide key={id}>
+              <img
+                src={thumbnail}
+                alt={title}
+                className="w-fit h-fit object-cover"
+              />
+              <div
+                className={`${styles.flexBetween} px-16 md:px-2 pt-4 w-full`}
+              >
+                <NavLink
+                  to={`/browse/${id}`}
+                  className="font-barlow text-xl uppercase font-bold tracking-wide text-white"
+                >
+                  {title}
+                </NavLink>
+                <span className="font-barlow text-lg uppercase font-semibold tracking-wide text-secondary-yellow-500">
+                  RATE {ratePer}
+                </span>
+              </div>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </section>
   );
