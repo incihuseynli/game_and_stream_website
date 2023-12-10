@@ -180,13 +180,12 @@ body {
   letter-spacing: 0.2rem;
 }
 /* Hover for Streamer card */
-.streamCard:hover{
-  .info{
+.streamCard:hover {
+  .info {
     display: flex;
     @apply -translate-y-3;
   }
 }
-
 
 /* ===============  ANIMATIONS =============== */
 

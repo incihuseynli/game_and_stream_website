@@ -43,7 +43,10 @@ export interface IGame {
   publisher: string;
   game_url: string;
 }
-
+export interface GamesAPIProps {
+  limit: number;
+  children: (games: IGame[]) => React.ReactNode;
+}
 export interface IUsers {
   id: string | number;
   username: string;
@@ -51,4 +54,16 @@ export interface IUsers {
   birthDate: string;
   followers: string | number;
   following: string | number;
+}
+
+export type FormEvent = React.FormEvent<HTMLFormElement>
+export type MouseEvent = React.MouseEvent<HTMLButtonElement>
+export type ChangeEvent = React.ChangeEvent<HTMLInputElement>
+
+
+export interface IDate {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
 }
