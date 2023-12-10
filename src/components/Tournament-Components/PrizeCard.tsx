@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { styles } from "../../styles";
+import CountdownTimer from "../Global-Components/CountdownTimer";
 interface IProps {
   isLuckyCard: boolean;
 }
 const PrizeCard = ({ isLuckyCard }: IProps) => {
+  // Should come from API
+  const endDate = new Date("December 31, 2023 23:59:59").toString();
   return (
     <div className="relative flex flex-col gap-6 font-barlow w-96 bg-black-500 rounded-lg px-4 py-8 hover:-translate-y-3 transition-all duration-700">
       {/* Prize */}
@@ -20,7 +23,7 @@ const PrizeCard = ({ isLuckyCard }: IProps) => {
         </span>
       </div>
       {/* Timeout */}
-      <div className=" absolute right-0 top-0 p-4 rounded-t-xl rounded-bl-xl ">
+      {/* <div className=" absolute right-0 top-0 p-4 rounded-t-xl rounded-bl-xl ">
         <div className="flex">
           <div className="flex flex-col items-center">
             <span className="text-white font-medium tracking-wide text-sm">
@@ -58,7 +61,8 @@ const PrizeCard = ({ isLuckyCard }: IProps) => {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
+      <CountdownTimer endDate={endDate} />
       {/* Info */}
       <div className={`${styles.flexCenter} flex-col gap-8 mt-24`}>
         {/* Title */}
@@ -128,7 +132,10 @@ const PrizeCard = ({ isLuckyCard }: IProps) => {
             </div>
           </div>
         </div>
-        <NavLink to="/" className="uppercase text-white font-bold text-lg tracking-wide hover:text-primary-green-300 transition-all duration-500">
+        <NavLink
+          to="/"
+          className="uppercase text-white font-bold text-lg tracking-wide hover:text-primary-green-300 transition-all duration-500"
+        >
           Join Now
         </NavLink>
       </div>
