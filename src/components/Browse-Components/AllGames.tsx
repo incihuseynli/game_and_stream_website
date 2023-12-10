@@ -7,30 +7,32 @@ import { IGame } from "../../types";
 import Axios from "axios";
 
 const AllGames = () => {
-  const options = {
-    method: "GET",
-    url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
-    headers: {
-      "X-RapidAPI-Key": "8270335a98mshff2fc09f55e7c03p15f4a7jsn3afb95e7043a",
-      "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
-    },
-  };
-  const [games, setGames] = useState<IGame[]>([]);
-  const [currentPage, setCurrentPage] = useState<number>(1);
   const limit = 6;
+  const URL = `http://localhost:3080/games`;
+  const [games, setGames] = useState<IGame[]>([]);
+  const handleData = () => {
+    try {
+      Axios.get(URL).then(({ data }) => {
+        setGames(data);
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
   useEffect(() => {
-    Axios.get(options.url).then(({ data }) => {
-      setGames(data);
-    });
-  }, [options.url]);
+    handleData();
+  }, []);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+
   const indexOfLastItem = currentPage * limit;
   const indexOfFirstItem = indexOfLastItem - limit;
   const currentDatas = games.slice(indexOfFirstItem, indexOfLastItem);
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
   const nextPage = () => setCurrentPage((prev) => prev + 1);
   const prevPage = () => setCurrentPage((prev) => prev - 1);
   // console.log(currentDatas);
-  
+
   return (
     <section className={`${styles.padding} my-24 flex flex-col gap-16`}>
       {/* Section Head */}
