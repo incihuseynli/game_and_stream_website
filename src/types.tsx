@@ -47,6 +47,9 @@ export interface GamesAPIProps {
   limit?: number;
   children: (games: IGame[]) => React.ReactNode;
 }
+export interface GameDetailsAPIProps {
+  children: (game: IGame | null) => React.ReactNode;
+}
 export interface IUsers {
   id: string | number;
   username: string;
