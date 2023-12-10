@@ -42,6 +42,23 @@ export interface IGame {
   thumbnail: string;
   publisher: string;
   game_url: string;
+  video_link: string;
+  genre: string;
+  rate: number | string;
+  age_rate: number | string;
+  downloads: number | string;
+  storage: number | string;
+  content: string;
+  smallImgs: object[];
+  img?: string;
+}
+export interface ITodaysPick {
+  id: string | number;
+  title: string;
+  thumbnail: string;
+  game_url: string;
+  ratePer: number | string;
+  short_desc: string;
 }
 export interface GameDetailsAPIProps {
   children: (game: IGame | null) => React.ReactNode;
@@ -60,10 +77,9 @@ export interface IUsers {
   following: string | number;
 }
 
-export type FormEvent = React.FormEvent<HTMLFormElement>
-export type MouseEvent = React.MouseEvent<HTMLButtonElement>
-export type ChangeEvent = React.ChangeEvent<HTMLInputElement>
-
+export type FormEvent = React.FormEvent<HTMLFormElement>;
+export type MouseEvent = React.MouseEvent<HTMLButtonElement>;
+export type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 
 export interface IDate {
   days: number;
