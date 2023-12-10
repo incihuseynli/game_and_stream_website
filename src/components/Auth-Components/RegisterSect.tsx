@@ -1,20 +1,21 @@
 import { EyeSlashIcon } from "@heroicons/react/24/solid";
 import Axios from "axios";
 import { useState } from "react";
+import { FormEvent } from "../../types";
 
 const RegisterSect = () => {
-  interface IUser{
-    email:string;
+  interface IUser {
+    email: string;
   }
   const [username, setUsername] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [birthDate, setBirthDate] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const handleRegister = async (e) => {
+  const handleRegister = async (e: FormEvent) => {
     e.preventDefault();
     const existingUsers = JSON.parse(localStorage.getItem("users") || "[]");
     const isUserExist = existingUsers.some(
-      (user:IUser) => user.email === email
+      (user: IUser) => user.email === email
     );
 
     // For already existed users
@@ -26,8 +27,10 @@ const RegisterSect = () => {
     const newUser = { username, password, email, birthDate };
     localStorage.setItem("users", JSON.stringify([...existingUsers, newUser]));
     await Axios.post("http://localhost:5000/users", newUser);
-  
   };
+  /**
+   * TODO: only add id & email to LocalStorage other infos should go to json server
+   **/
   return (
     <section className="border border-gray-500 border-opacity-20 p-8 flex flex-col gap-4 shadow-xl">
       <h4 className="text-3xl font-barlow font-bold uppercase text-white">
