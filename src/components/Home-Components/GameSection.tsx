@@ -17,7 +17,7 @@ const GameSection = () => {
         <div className="bg-black-500 w-full rounded-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-9 place-items-center items-center py-16 px-8 ">
           <GamesLists/>
         </div>
-        <Btn children="View more" path="/" />
+        <Btn children="View more" path="/browse" />
       </div>
     </section>
   );
