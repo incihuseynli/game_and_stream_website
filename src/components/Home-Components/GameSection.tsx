@@ -1,7 +1,7 @@
 import { styles } from "../../styles";
 import Btn from "../Buttons/Btn";
+import GamesLists from "../Global-Components/GamesLists";
 import SectionHead from "../Global-Components/SectionHead";
-import GameCard from "./GameCard";
 
 const GameSection = () => {
   return (
@@ -15,7 +15,7 @@ const GameSection = () => {
       >
         {/* List of Game Cards */}
         <div className="bg-black-500 w-full rounded-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-9 place-items-center items-center py-16 px-8 ">
-          <GameCard/>
+          <GamesLists/>
         </div>
         <Btn children="View more" path="/" />
       </div>
