@@ -98,7 +98,7 @@ const GameCard = () => {
                   {publisher}
                 </h5>
               </div>
-              <BtnText path="/browse/1">More Details</BtnText>
+              <BtnText path={`/browse/${id}`}>More Details</BtnText>
             </div>
           </div>
         );
