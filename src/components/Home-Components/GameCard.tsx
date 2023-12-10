@@ -2,22 +2,18 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import { styles } from "../../styles";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import BtnText from "../Buttons/BtnText";
-// import { IGame } from "../../types";
-// // type currentData = {
-//   currentData: IGame;
-// };
-// interface ICurrentData extends currentData, IGame {}
+import { IGame } from "../../types";
+
 const GameCard = ({
-  currentData: { thumbnail, title, publisher, id }
-}) => {
-  // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  currentData: { thumbnail, title, id, publisher, rate, downloads },
+}: IGame) => {
   return (
     <div
       className={`flex flex-col md:flex-row gap-4 items-center w-full h-full   rounded-xl p-4 bg-black-800 shadow-2xl border border-white border-opacity-10 hover:border hover:border-primary-green-500 hover:border-opacity-30`}
     >
       <img
         src={thumbnail}
-        alt="Game Name"
+        alt={title}
         className="rounded-xl w-40 h-40  object-cover"
       />
       <div className="w-full flex flex-col gap-2">
@@ -35,7 +31,7 @@ const GameCard = ({
                 <StarIcon />
               </div>
               <span className="text-gray-50 font-bold font-poppins text-sm">
-                4.8
+                {rate}
               </span>
             </div>
             {/* Download rate */}
@@ -44,7 +40,7 @@ const GameCard = ({
                 <ArrowDownTrayIcon />
               </div>
               <span className="text-gray-50 font-bold font-poppins text-sm">
-                2.5M
+                {downloads}
               </span>
             </div>
           </div>
