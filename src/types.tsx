@@ -44,7 +44,7 @@ export interface IGame {
   game_url: string;
 }
 export interface GamesAPIProps {
-  limit: number;
+  limit?: number;
   children: (games: IGame[]) => React.ReactNode;
 }
 export interface IUsers {
