@@ -9,6 +9,11 @@ import img1 from "/img1.jpg";
 import BtnText from "../Buttons/BtnText";
 import GameDetailAPI from "../../api/GameDetailAPI";
 const SingleGame = () => {
+  /**
+   * ! TOO MANY REQUEST ERROR
+   * ! COULDN'T GET ANY DATA FROM GAME
+   * ! GAME RETURNS NULL
+   */
   return (
     <GameDetailAPI>
       {(game) => (
@@ -16,13 +21,12 @@ const SingleGame = () => {
           className={`${styles.flexCenter} flex-col gap-12 ${styles.paddingY} px-4 bg-black-500 rounded-xl`}
         >
           {/* Image and Game Promo Video */}
-
           {game ? (
             <>
               <div className="flex flex-col items-center md:flex-row gap-6">
                 <img
                   src={game.thumbnail}
-                  alt=""
+                  alt={game.title}
                   className="w-full md:w-fit h-fit  lg:w-fit lg:h-[22.5rem] object-cover rounded-xl"
                 />
                 <video
