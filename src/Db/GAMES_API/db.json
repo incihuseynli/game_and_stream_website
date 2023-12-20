@@ -21,7 +21,7 @@
           "img": "https://imgs.search.brave.com/bxETaJumHOEctQFfRHZwNHG87alm-UDZbYRog_VPhYs/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tbW9z/LmNvbS93cC1jb250/ZW50L2dhbGxlcnkv/YmxhZGUtYW5kLXNv/dWwtb3ZlcnZpZXct/MS0yL2NhY2hlL2Js/YWRlLWFuZC1zb3Vs/LXB2cC5qcGctbmdn/aWQwNTQzNzA4LW5n/ZzBkeW4tNjAweDMz/OHgxMDAtMDBmMHcw/MTBjMDEwcjExMGYx/MTByMDEwdDAxMC5q/cGc"
         }
       ],
-      "rate": 4.0,
+      "rate": 4,
       "ratePer": "50%",
       "age_rate": 13,
       "downloads": "9.5K",
@@ -357,7 +357,7 @@
           "img": "https://imgs.search.brave.com/bxETaJumHOEctQFfRHZwNHG87alm-UDZbYRog_VPhYs/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tbW9z/LmNvbS93cC1jb250/ZW50L2dhbGxlcnkv/YmxhZGUtYW5kLXNv/dWwtb3ZlcnZpZXct/MS0yL2NhY2hlL2Js/YWRlLWFuZC1zb3Vs/LXB2cC5qcGctbmdn/aWQwNTQzNzA4LW5n/ZzBkeW4tNjAweDMz/OHgxMDAtMDBmMHcw/MTBjMDEwcjExMGYx/MTByMDEwdDAxMC5q/cGc"
         }
       ],
-      "rate": 4.0,
+      "rate": 4,
       "ratePer": "50%",
       "age_rate": 13,
       "downloads": "9.5K",
@@ -673,14 +673,526 @@
       "content": "A free-to-play action MMORPG featuring mounted, in-air combat. Alias, dignissimos obcaecati? Consequatur tempora officiis aspernatur vitae nemo illum."
     }
   ],
-  "todaysPick" : [
+  "todaysPick": [
     {
-        "id" : 1,
-        "title" : "Genshin Impact",
-        "ratePer":"93%",
-        "short_desc" : "Lorem ipsum dolor sit amet, consteur adipiscing Duis elementum sollicitudin is yaugue euismods Nulla ullamcorper. Morbi pharetra tellus miolslis, tincidunt massa venenatis.",
-        "game_url" : "https://www.freetogame.com/genshin-impact",
-        "thumbnail" : "https://imgs.search.brave.com/Jex-K8Piv6OitxjNiI6kd3FNPIkNG-eNEN0sZPMVTbw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDc0ODcw/NTYuanBn"
+      "id": 1,
+      "title": "Genshin Impact",
+      "ratePer": "93%",
+      "short_desc": "Lorem ipsum dolor sit amet, consteur adipiscing Duis elementum sollicitudin is yaugue euismods Nulla ullamcorper. Morbi pharetra tellus miolslis, tincidunt massa venenatis.",
+      "game_url": "https://www.freetogame.com/genshin-impact",
+      "thumbnail": "https://imgs.search.brave.com/Jex-K8Piv6OitxjNiI6kd3FNPIkNG-eNEN0sZPMVTbw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDc0ODcw/NTYuanBn"
+    }
+  ],
+  "streamers": [
+    {
+      "id": 1,
+      "username": "Black Ninja",
+      "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team02.png",
+      "followers": "8.95K",
+      "rate": 3.2,
+      "monthly_watchers": "5K",
+      "current_watchers": "5K",
+      "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-02.jpg",
+      "play_hours": 4565,
+      "stream_hours": 46,
+      "game_name": "Trove",
+      "link": "https://www.youtube.com/watch?v=r6LxWRdXaJs",
+      "prev_streams": [
+        {
+          "id": 1,
+          "game_name": "Noah's Heart",
+          "watchers": "2.6K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-02.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=r6LxWRdXaJs"
+        },
+        {
+          "id": 2,
+          "game_name": "Destiny 2",
+          "watchers": "4K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=fS25_dfVLVs"
+        },
+        {
+          "id": 3,
+          "game_name": "Trove",
+          "watchers": "10K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-01.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=Nu7K23acLe0"
+        },
+        {
+          "id": 4,
+          "game_name": "Trove",
+          "watchers": "10K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-01.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=Nu7K23acLe0"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "Gamezer",
+      "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team01.png",
+      "followers": "1.5M",
+      "rate": 4.6,
+      "monthly_watchers": "16K",
+      "current_watchers": "16K",
+      "game_name": "Destiny 2",
+      "play_hours": 7896,
+      "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+      "stream_hours": 83,
+      "link": "https://www.youtube.com/watch?v=vEdRScsF0s0&pp=ygUOZ2Vuc2hpbiBpbXBhY3Q%3D",
+      "prev_streams": [
+        {
+          "id": 1,
+          "game_name": "Noah's Heart",
+          "watchers": "2.6K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-02.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=r6LxWRdXaJs"
+        },
+        {
+          "id": 2,
+          "game_name": "Destiny 2",
+          "watchers": "4K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=fS25_dfVLVs"
+        },
+        {
+          "id": 3,
+          "game_name": "Trove",
+          "watchers": "10K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-01.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=Nu7K23acLe0"
+        },
+        {
+          "id": 4,
+          "game_name": "Trove",
+          "watchers": "10K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-01.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=Nu7K23acLe0"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "username": "Alley Boss",
+      "game_name": "Noah's Heart",
+      "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team03.png",
+      "followers": "3.2M",
+      "rate": 4.9,
+      "monthly_watchers": "150K",
+      "current_watchers": "150K",
+      "play_hours": 9456,
+      "stream_hours": 74,
+      "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+      "link": "https://www.youtube.com/watch?v=sxMmB5Dp8_s&pp=ygUOZ2Vuc2hpbiBpbXBhY3Q%3D",
+      "prev_streams": [
+        {
+          "id": 1,
+          "game_name": "Noah's Heart",
+          "watchers": "2.6K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-02.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=r6LxWRdXaJs"
+        },
+        {
+          "id": 2,
+          "game_name": "Destiny 2",
+          "watchers": "4K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=fS25_dfVLVs"
+        },
+        {
+          "id": 3,
+          "game_name": "Trove",
+          "watchers": "10K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-01.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=Nu7K23acLe0"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "username": "player007",
+      "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team04.png",
+      "followers": "6K",
+      "monthly_watchers": "3.4K",
+      "current_watchers": "3.4K",
+      "play_hours": 3088,
+      "rate": 3.7,
+      "game_name": "Trove",
+      "stream_hours": 55,
+      "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+      "link": "https://www.youtube.com/watch?v=QdBZY2fkU-0&pp=ygUOZ2Vuc2hpbiBpbXBhY3Q%3D",
+      "prev_streams": [
+        {
+          "id": 1,
+          "game_name": "",
+          "watchers": "",
+          "thumbnail": "",
+          "stream_link": ""
+        },
+        {
+          "id": 2,
+          "game_name": "",
+          "watchers": "",
+          "thumbnail": "",
+          "stream_link": ""
+        },
+        {
+          "id": 3,
+          "game_name": "",
+          "watchers": "",
+          "thumbnail": "",
+          "stream_link": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "username": "Black Ninja",
+      "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team01.png",
+      "followers": "8.95K",
+      "rate": 3.2,
+      "monthly_watchers": "5K",
+      "current_watchers": "5K",
+      "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-02.jpg",
+      "play_hours": 4565,
+      "stream_hours": 46,
+      "game_name": "Trove",
+      "link": "https://www.youtube.com/watch?v=r6LxWRdXaJs",
+      "prev_streams": [
+        {
+          "id": 1,
+          "game_name": "Noah's Heart",
+          "watchers": "2.6K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-02.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=r6LxWRdXaJs"
+        },
+        {
+          "id": 2,
+          "game_name": "Destiny 2",
+          "watchers": "4K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=fS25_dfVLVs"
+        },
+        {
+          "id": 3,
+          "game_name": "Trove",
+          "watchers": "10K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-01.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=Nu7K23acLe0"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "username": "Gamezer",
+      "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team02.png",
+      "followers": "1.5M",
+      "rate": 4.6,
+      "monthly_watchers": "16K",
+      "current_watchers": "16K",
+      "game_name": "Destiny 2",
+      "play_hours": 7896,
+      "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+      "stream_hours": 83,
+      "link": "https://www.youtube.com/watch?v=vEdRScsF0s0&pp=ygUOZ2Vuc2hpbiBpbXBhY3Q%3D",
+      "prev_streams": [
+        {
+          "id": 1,
+          "game_name": "Noah's Heart",
+          "watchers": "2.6K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-02.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=r6LxWRdXaJs"
+        },
+        {
+          "id": 2,
+          "game_name": "Destiny 2",
+          "watchers": "4K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=fS25_dfVLVs"
+        },
+        {
+          "id": 3,
+          "game_name": "Trove",
+          "watchers": "10K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-01.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=Nu7K23acLe0"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "username": "Alley Boss",
+      "game_name": "Noah's Heart",
+      "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team03.png",
+      "followers": "3.2M",
+      "rate": 4.9,
+      "monthly_watchers": "150K",
+      "current_watchers": "150K",
+      "play_hours": 9456,
+      "stream_hours": 74,
+      "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+      "link": "https://www.youtube.com/watch?v=sxMmB5Dp8_s&pp=ygUOZ2Vuc2hpbiBpbXBhY3Q%3D",
+      "prev_streams": [
+        {
+          "id": 1,
+          "game_name": "Noah's Heart",
+          "watchers": "2.6K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-02.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=r6LxWRdXaJs"
+        },
+        {
+          "id": 2,
+          "game_name": "Destiny 2",
+          "watchers": "4K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=fS25_dfVLVs"
+        },
+        {
+          "id": 3,
+          "game_name": "Trove",
+          "watchers": "10K",
+          "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-01.jpg",
+          "stream_link": "https://www.youtube.com/watch?v=Nu7K23acLe0"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "username": "player007",
+      "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team02.png",
+      "followers": "6K",
+      "monthly_watchers": "3.4K",
+      "current_watchers": "3.4K",
+      "play_hours": 3088,
+      "rate": 3.7,
+      "game_name": "Trove",
+      "stream_hours": 55,
+      "thumbnail": "https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/featured-03.jpg",
+      "link": "https://www.youtube.com/watch?v=QdBZY2fkU-0&pp=ygUOZ2Vuc2hpbiBpbXBhY3Q%3D",
+      "prev_streams": [
+        {
+          "id": 1,
+          "game_name": "",
+          "watchers": "",
+          "thumbnail": "",
+          "stream_link": ""
+        },
+        {
+          "id": 2,
+          "game_name": "",
+          "watchers": "",
+          "thumbnail": "",
+          "stream_link": ""
+        },
+        {
+          "id": 3,
+          "game_name": "",
+          "watchers": "",
+          "thumbnail": "",
+          "stream_link": ""
+        }
+      ]
+    }
+  ],
+  "tournaments": [
+    {
+      "id": 1,
+      "prize": 25000,
+      "title": "ZOMBIE LAND TOURNAMENT MAX",
+      "status": "weekly",
+      "place_count": 3,
+      "endDate": "2023-12-31T23:59:59Z",
+      "content": "Excepteur sint occaecat atat non proident, sunt in culpa qui officia deserunt mollit anim id est labor umLor em ipsum dolor amet consteur adiscing Duis elentum solliciin is yaugue euismods Nulla ullaorper. Ipsum is simply dummy text of printing and typeetting industry. Lorem Ipsum has been the industry's standsaard sipiscing Duis elementum solliciin. Duis aute irure dolor in repderit in voluptate velit esse cillum dolorliq commodo consequat.",
+      "quote": "Duis elentum solliciin is yaugue euismods Nulla ullaorper. Ipsum is simply dummy text of printing and typeetting industry.",
+      "promo": "https://www.youtube.com/watch?v=r6LxWRdXaJs",
+      "sponsor": "FOXTIE MAX",
+      "sponsor_logo": "https://themedox.com/mykd/wp-content/uploads/2023/10/tournament_thumb01.png",
+      "live_time": "10AM - 15PM",
+      "live_link": "https://www.youtube.com/watch?v=r6LxWRdXaJs",
+      "isOnline": true,
+      "top_three_players": [
+        {
+          "id": 1,
+          "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team02.png",
+          "username": "Alley Boss",
+          "wins": 305
+        },
+        {
+          "id": 2,
+          "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team01.png",
+          "username": "Black Ninja",
+          "wins": 219
+        },
+        {
+          "id": 3,
+          "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team03.png",
+          "username": "Gamezer",
+          "wins": 198
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prize": 50000,
+      "title": "ArcheAge TOURNAMENT MAX",
+      "status": "lucky card",
+      "place_count": 10,
+      "endDate": "2024-05-31T23:59:59Z",
+      "content": "Excepteur sint occaecat atat non proident, sunt in culpa qui officia deserunt mollit anim id est labor umLor em ipsum dolor amet consteur adiscing Duis elentum solliciin is yaugue euismods Nulla ullaorper. Ipsum is simply dummy text of printing and typeetting industry. Lorem Ipsum has been the industry's standsaard sipiscing Duis elementum solliciin. Duis aute irure dolor in repderit in voluptate velit esse cillum dolorliq commodo consequat.",
+      "quote": "Duis elentum solliciin is yaugue euismods Nulla ullaorper. Ipsum is simply dummy text of printing and typeetting industry.",
+      "promo": "https://www.youtube.com/watch?v=r6LxWRdXaJs",
+      "sponsor": "HATLAX TM.",
+      "sponsor_logo": "https://themedox.com/mykd/wp-content/uploads/2023/10/tournament_thumb02.png",
+      "live_time": "18PM - 22PM",
+      "live_link": "https://www.youtube.com/watch?v=r6LxWRdXaJs",
+      "isOnline": false,
+      "top_three_players": [
+        {
+          "id": 1,
+          "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team02.png",
+          "username": "Alley Boss",
+          "wins": 206
+        },
+        {
+          "id": 2,
+          "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team01.png",
+          "username": "Black Ninja",
+          "wins": 200
+        },
+        {
+          "id": 3,
+          "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team04.png",
+          "username": "player007",
+          "wins": 200
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prize": 75000,
+      "title": "Genshin Impact TOURNAMENT MAX",
+      "status": "month",
+      "place_count": 50,
+      "endDate": "2024-12-31T23:59:59Z",
+      "content": "Excepteur sint occaecat atat non proident, sunt in culpa qui officia deserunt mollit anim id est labor umLor em ipsum dolor amet consteur adiscing Duis elentum solliciin is yaugue euismods Nulla ullaorper. Ipsum is simply dummy text of printing and typeetting industry. Lorem Ipsum has been the industry's standsaard sipiscing Duis elementum solliciin. Duis aute irure dolor in repderit in voluptate velit esse cillum dolorliq commodo consequat.",
+      "quote": "Duis elentum solliciin is yaugue euismods Nulla ullaorper. Ipsum is simply dummy text of printing and typeetting industry.",
+      "promo": "https://www.youtube.com/watch?v=r6LxWRdXaJs",
+      "sponsor": "SPARTAN IV",
+      "sponsor_logo": "https://themedox.com/mykd/wp-content/uploads/2023/10/tournament_thumb03.png",
+      "live_time": "11AM - 18PM",
+      "live_link": "https://www.youtube.com/watch?v=r6LxWRdXaJs",
+      "isOnline": true,
+      "top_three_players": [
+        {
+          "id": 1,
+          "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team02.png",
+          "username": "Alley Boss",
+          "wins": 511
+        },
+        {
+          "id": 2,
+          "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team01.png",
+          "username": "Black Ninja",
+          "wins": 390
+        },
+        {
+          "id": 3,
+          "image": "https://themedox.com/mykd/wp-content/uploads/2023/10/team03.png",
+          "username": "Gamezer",
+          "wins": 302
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "test",
+      "password": "123456",
+      "email": "test@email.com",
+      "birthDate": "2023-12-08",
+      "id": 1,
+      "streamCount": 4,
+      "playingHours": 1245,
+      "games": 12,
+      "image": "./streamer1.png"
+    },
+    {
+      "username": "test",
+      "password": "123456",
+      "email": "test2@email.com",
+      "birthDate": "2023-12-15",
+      "id": 2,
+      "streamCount": 4,
+      "playingHours": 1245,
+      "games": 12,
+      "image": "./streamer2.png"
+    },
+    {
+      "username": "",
+      "password": "",
+      "email": "",
+      "birthDate": "",
+      "id": 3,
+      "streamCount": 4,
+      "playingHours": 1245,
+      "games": 12,
+      "image": "./streamer3.png"
+    },
+    {
+      "username": "loremus",
+      "password": "123456",
+      "email": "lorem@email.com",
+      "birthDate": "2023-12-17",
+      "id": 4,
+      "streamCount": 4,
+      "games": 12,
+      "playingHours": 1245,
+      "image": "./streamer4.png"
+    },
+    {
+      "username": "lorem1",
+      "password": "123456",
+      "email": "lorem1@email.com",
+      "birthDate": "2023-12-17",
+      "id": 5,
+      "streamCount": 4,
+      "playingHours": 1245,
+      "games": 12,
+      "image": "./streamer1.png"
+    },
+    {
+      "username": "dsdffds",
+      "password": "123456",
+      "email": "dslkk@email.com",
+      "birthDate": "2023-12-17",
+      "id": 6,
+      "streamCount": 4,
+      "playingHours": 1245,
+      "games": 12,
+      "image": "./streamer2.png"
+    },
+    {
+      "username": "sdsdsds",
+      "password": "sadasdsad",
+      "email": "dsadsad@email.com",
+      "birthDate": "2023-12-17",
+      "id": 7,
+      "streamCount": 4,
+      "playingHours": 1245,
+      "games": 12,
+      "image": "./streamer3.png"
+    },
+    {
+      "username": "test34",
+      "password": "123456",
+      "email": "test23@email.com",
+      "birthDate": "2023-12-17",
+      "id": 8,
+      "streamCount": 4,
+      "playingHours": 1245,
+      "games": 12,
+      "image": "./streamer4.png"
     }
   ]
 }
