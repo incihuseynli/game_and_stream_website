@@ -16,10 +16,10 @@
 html {
   scroll-behavior: smooth;
 }
-html::-webkit-scrollbar {
+::-webkit-scrollbar {
   @apply w-2 bg-primary-green-800;
 }
-html::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   @apply bg-primary-green-500 w-2 h-8 rounded-2xl;
 }
 
@@ -123,6 +123,9 @@ body {
 .shadowPrize {
   text-shadow: -1px -3px 30px #45f983;
 }
+.shadowPrizeSpecial {
+  text-shadow: -1px -3px 30px #ffbf19;
+}
 .boxShadow {
   box-shadow: rgba(255, 191, 25, 0.4) 5px 5px, rgba(255, 191, 25, 0.3) 10px 10px,
     rgba(255, 191, 25, 0.2) 15px 15px, rgba(255, 191, 25, 0.1) 20px 20px,
@@ -215,6 +218,127 @@ body {
     -webkit-transform: translateX(-4px);
     transform: translateX(-4px);
   }
+}
+/* IMAGE HOVER ANIMATION */
+.heroImage:hover {
+  -webkit-animation: shake-horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    both;
+  animation: shake-horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+
+.squareAnimation {
+  -webkit-animation: up-to-down 3.5s infinite linear both;
+  animation: up-to-down 3.5s infinite linear both;
+}
+@keyframes up-to-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+}
+.phoneAnimation {
+  -webkit-animation: phone-anim 6s infinite linear both;
+  animation: phone-anim 6s infinite linear both;
+}
+@keyframes phone-anim {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+}
+.squareAnimationReverse {
+  -webkit-animation: down-to-up 3.5s infinite linear both;
+  animation: down-to-up 3.5s infinite linear both;
+}
+@keyframes down-to-up {
+  50% {
+    transform: translateY(0);
+  }
+  0%,
+  100% {
+    transform: translateY(100%);
+  }
+}
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  transform-origin: bottom;
+}
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  transform-origin: top;
 }
 
 /* ===================== 404 Error Page Lamp and Stars Animations ====================================== */
