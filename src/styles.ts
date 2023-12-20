@@ -7,7 +7,6 @@ const styles: IStyles = {
   margin: "mx-4 md:mx-16 my-6",
   flexBetween: "flex items-center justify-between",
   flexCenter: "flex items-center justify-center",
-  heading: "text-9xl ",
 };
 
 export { styles };
