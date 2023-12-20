@@ -1,6 +1,6 @@
 import React from "react";
 import clickBtn from "/closeClick.mp3";
-
+import image from "/closeBtn.svg"
 interface ICloseBtnProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -15,7 +15,7 @@ const CloseBtn = ({ setIsOpen }: ICloseBtnProps) => {
   return (
     <div>
       <img
-        src="./closeBtn.svg"
+        src={image}
         alt="menu closing button"
         className="hover:scale-150 cursor-pointer"
         onClick={handleClick}
