@@ -57,25 +57,19 @@ export const Paths: RoutesType = [
     element: <StreamerDetails />,
   },
   {
-    id:9,
-    path : "/auth",
-    element : <Auth/>
+    id: 9,
+    path: "/auth",
+    element: <Auth />,
   },
   {
-    id:10,
-    path : "/auth/lost-password",
-    element : <PasswordRepair/>
+    id: 10,
+    path: "/auth/lost-password",
+    element: <PasswordRepair />,
   },
+
   {
     id: 12,
     path: "*",
-    element: <PageNotFound/>
-  }
-  /**
-   * TODO: Streamers and Streamer Page
-   * TODO: Contact Page ✔
-   * TODO: Sign in/Log in Page
-   * TODO: Profile Page
-   * TODO: Error Page ✔
-   */
+    element: <PageNotFound />,
+  },
 ];
