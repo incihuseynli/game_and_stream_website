@@ -11,10 +11,11 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 import { useParams } from "react-router";
 import { IGame } from "../../types";
+import { Helmet } from "react-helmet";
 
 const SingleGame = () => {
   const { id } = useParams<{ id: string }>();
-  const [game, setGame] = useState<IGame[]>([]);
+  const [game, setGame] = useState<IGame>({} as IGame);
   const URL = "http://localhost:3080/games/";
   // "https://my-json-server.typicode.com/dbForProjects/games_api/games/";
   const handleData = () => {
@@ -34,6 +35,12 @@ const SingleGame = () => {
     <div
       className={`${styles.flexCenter} flex-col gap-12 ${styles.paddingY} px-4 bg-black-500 rounded-xl`}
     >
+      {/* Helmet config */}
+      <Helmet>
+        <title>{`${game.title} details`}</title>
+        <meta name="description" content={`${game.title} details page`} />
+      </Helmet>
+      ;{/* Details Section */}
       <div className="flex  items-center justify-center w-full">
         <img
           src={game.thumbnail}

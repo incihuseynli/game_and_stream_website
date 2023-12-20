@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { styles } from "../../styles";
 import NavLinks from "../Header-Components/NavLinks";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/solid";
+import logo from "/logo.png";
 const Footer = () => {
   return (
     <footer
@@ -14,7 +15,7 @@ const Footer = () => {
           className={`${styles.flexCenter} flex-col gap-6 sm:items-start sm:justify-start `}
         >
           <NavLink to="/">
-            <img src="./logo.png" alt="logo" />
+            <img src={logo} alt="logo" />
           </NavLink>
           <p className="sm:ml-3 w-4/5  text-center text-gray-50 text-sm font-medium sm:text-left">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat

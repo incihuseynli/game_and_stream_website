@@ -1,14 +1,14 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { styles } from "../../styles";
-import { IChildren, IGame } from "../../types";
+import { IChildren, IGame, IStreamers } from "../../types";
 import { ReactEventHandler } from "react";
 interface IPaginate {
   prevPage: ReactEventHandler<HTMLButtonElement>;
   nextPage: ReactEventHandler<HTMLButtonElement>;
   currentPage: number;
-  stateProp: IGame[];
+  stateProp: IGame[] | IStreamers[];
   limit: number;
-  paginate: ReactEventHandler<HTMLButtonElement>;
+  paginate: (pageNumber: number) => void;
 }
 interface AllProps extends IChildren, IPaginate {}
 const All = ({
@@ -23,13 +23,13 @@ const All = ({
   return (
     <>
       {/* All  */}
-      <div className="bg-black-500 rounded-2xl">
+      <div className="bg-black-500 rounded-2xl pb-4">
         {/* List  */}
 
         {children}
 
         {/* Pagination */}
-        <div className={`${styles.flexCenter} gap-2 text-white mt-4 mb-8`}>
+        <div className={`${styles.flexCenter} gap-2 text-white mt-4 mb-12`}>
           {/* Previous button */}
           <button
             className="w-9 h-9 border text-white border-gray-500 hover:border-primary-green-300 hover:text-primary-green-300 transition-all duration-500 rounded-md p-2"

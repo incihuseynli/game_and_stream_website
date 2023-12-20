@@ -5,6 +5,7 @@ import SectionHead from "../Global-Components/SectionHead";
 import GameCard from "../Home-Components/GameCard";
 import { IGame } from "../../types";
 import Axios from "axios";
+import Reveal from "../../transitions/Reveal";
 
 const AllGames = () => {
   const limit = 6;
@@ -22,6 +23,7 @@ const AllGames = () => {
   useEffect(() => {
     handleData();
   }, []);
+  //   Pagination config
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   const indexOfLastItem = currentPage * limit;
@@ -41,20 +43,24 @@ const AllGames = () => {
         title="All Best Games is in here"
       />
       {/* All Games */}
-      <All
-        currentPage={currentPage}
-        limit={limit}
-        nextPage={nextPage}
-        paginate={paginate}
-        prevPage={prevPage}
-        stateProp={games}
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-9 place-items-center py-16 px-4 lg:px-8">
-          {currentDatas.map((currentData) => {
-            return <GameCard key={currentData.id} currentData={currentData} />;
-          })}
-        </div>
-      </All>
+      <Reveal>
+        <All
+          currentPage={currentPage}
+          limit={limit}
+          nextPage={nextPage}
+          paginate={paginate}
+          prevPage={prevPage}
+          stateProp={games}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-9 place-items-center py-16 px-4 lg:px-8">
+            {currentDatas.map((currentData) => {
+              return (
+                <GameCard key={currentData.id} currentData={currentData} />
+              );
+            })}
+          </div>
+        </All>
+      </Reveal>
     </section>
   );
 };
