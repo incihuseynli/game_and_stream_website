@@ -1,26 +1,34 @@
-import Header from "../components/Header-Components/Header";
+import PageTransition from "../transitions/PageTransition";
 import PrizeSection from "../components/Tournament-Components/PrizeSection";
 import TournamentsList from "../components/Tournament-Components/TournamentsList";
 import image from "/heroimg2.png";
+import Reveal from "../transitions/Reveal";
+import { Helmet } from "react-helmet";
+import PageHead from "../components/Global-Components/PageHead";
 
 const Tournament = () => {
   return (
-    <>
+    <PageTransition>
+      {/* Helmet config */}
+      <Helmet>
+        <title>Tournaments</title>
+        <meta
+          name="description"
+          content="Join our tournaments and earn more than money"
+        />
+      </Helmet>
       {/* Header */}
-      <Header>
-        <h4 className="md:ml-8 mb-12 md:mb-0 text-center md:text-left font-barlow font-bold text-white text-4xl md:text-5xl uppercase tracking-wide drop-shadow-lg">
-          Tournaments
-        </h4>
-        <img src={image} alt="" className="w-fit h-fit  md:ml-24 " />
-      </Header>
+      <PageHead image={image} pageTitle="Tournaments" />
       {/* Main */}
       <main>
         {/* Prizes */}
         <PrizeSection />
         {/* Tournaments List */}
-        <TournamentsList/>
+        <Reveal>
+          <TournamentsList />
+        </Reveal>
       </main>
-    </>
+    </PageTransition>
   );
 };
 

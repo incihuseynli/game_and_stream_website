@@ -1,6 +1,16 @@
+import { Helmet } from "react-helmet";
+
 const PageNotFound = () => {
   return (
     <main className=" w-full h-screen">
+      {/* Helmet config */}
+      <Helmet>
+        <title>404 | Page doesn't exist</title>
+        <meta
+          name="description"
+          content="The page you're looking couldn't find"
+        />
+      </Helmet>
       <div>
         <div className="starsec"></div>
         <div className="starthird"></div>
