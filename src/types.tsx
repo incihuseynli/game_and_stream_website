@@ -49,8 +49,12 @@ export interface IGame {
   downloads: number | string;
   storage: number | string;
   content: string;
-  smallImgs: object[];
-  img?: string;
+  smallImgs: nestedGames[];
+  ratePer: string | number;
+}
+type nestedGames = {
+  img:string;
+  id?: string | number;
 }
 export interface ITodaysPick {
   id: string | number;
@@ -67,11 +71,17 @@ export interface GamesAPIProps {
   limit?: number;
   children: (games: IGame[]) => React.ReactNode;
 }
+export interface StreamsAPIProps {
+  limit?: number;
+  children: (streamers: IStreamers[]) => React.ReactNode;
+}
 
 export interface IUsers {
   id: string | number;
   username: string;
   email: string;
+  image: string;
+  password: string | number;
   birthDate: string;
   followers: string | number;
   following: string | number;
@@ -86,4 +96,76 @@ export interface IDate {
   hours: number;
   minutes: number;
   seconds: number;
+}
+
+export interface IStreamers {
+  id: string | number;
+  username: string;
+  image: string;
+  followers: string | number;
+  monthly_watchers: string | number;
+  play_hours: string | number;
+  stream_hours: string | number;
+  rate: string | number;
+  link: string;
+  thumbnail: string;
+  current_watchers: string | number;
+  game_name: string;
+  prev_streams: IPrevStreams[];
+}
+export interface IPrevStreams {
+  id: string | number;
+  game_name: string;
+  watchers: string | number;
+  thumbnail: string;
+  stream_link: string;
+}
+export interface ITournaments {
+  id: string | number;
+  prize: string | number;
+  title: string;
+  status: string;
+  place_count: string | number;
+  content: string;
+  quote: string;
+  promo: string;
+  sponsor: string;
+  sponsor_logo: string;
+  live_time: string;
+  live_link: string;
+  isOnline: boolean;
+  top_three_players: ITop3[];
+  endDate : string;
+}
+interface ITop3 {
+  id: string | number;
+  image: string;
+  username: string;
+  wins: string | number;
+}
+
+export interface IFollower {
+  id: string | number;
+  name: string;
+  username: string;
+  email: string;
+  image: string;
+  isVerified?: boolean;
+  isFollowed: boolean;
+}
+
+export interface IStats {
+  id: string | number;
+  title: string;
+  image: string;
+  end: number;
+}
+
+export interface IAuthContext {
+  isLogged: boolean;
+  handleLogin: () => void;
+  handleLogout: () => void;
+}
+export interface IContext {
+  children: ReactNode;
 }
