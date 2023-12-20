@@ -1,16 +1,21 @@
-import Header from "../Header-Components/Header";
+import { useState } from "react";
+import SubmitBtn from "../Buttons/SubmitBtn";
 import image from "/heroimg3.png";
+import { FormEvent } from "../../types";
+import Module from "../Global-Components/Module";
+import PageHead from "../Global-Components/PageHead";
 
 const PasswordRepair = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const handleSubmit = (e: FormEvent): void => {
+    e.preventDefault();
+    setIsOpen(true);
+  };
+
   return (
     <>
       {/* Header */}
-      <Header>
-        <h4 className="md:ml-4 lg:ml-8 mb-12 md:mb-0 text-center md:text-left font-barlow font-bold text-white text-4xl md:text-5xl uppercase tracking-wide drop-shadow-lg">
-          Password Repairment
-        </h4>
-        <img src={image} alt="" className="w-72 h-72 lg:ml-56 " />
-      </Header>
+      <PageHead image={image} pageTitle="Password Repairment" />
       <main className="my-24 flex items-center justify-center">
         <section className="border w-full lg:w-2/3 border-gray-500 border-opacity-20 p-8 flex flex-col gap-4 shadow-xl">
           <h4 className="text-3xl font-barlow font-bold uppercase text-white">
@@ -20,18 +25,16 @@ const PasswordRepair = () => {
             Please enter your email address. You will receive a link to create a
             new password via email.
           </p>
-          <form className="flex flex-col gap-6 ">
+          <form className="flex flex-col gap-6 " onSubmit={handleSubmit}>
             <input
               type="email"
               placeholder="Email *"
-              className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white"
+              required
+              className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide  text-white"
             />
-            <input
-              type="submit"
-              value="Reset Password"
-              className="mt-6 w-fit text-white font-barlow font-bold tracking-wide uppercase text-base bg-primary-green-500 hover:bg-secondary-yellow-500 transition-all duration-700 py-4 px-8 rounded-sm"
-            />
+            <SubmitBtn value="Reset Password" />
           </form>
+          {isOpen && <Module setIsOpen={setIsOpen} type="your new password" />}
         </section>
       </main>
     </>
