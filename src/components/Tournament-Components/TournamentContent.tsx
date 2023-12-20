@@ -1,65 +1,58 @@
+import { useParams } from "react-router";
 import TournamentForm from "./TournamentForm";
 import image from "/Quote.svg";
+import { useEffect, useState } from "react";
+import { ITournaments } from "../../types";
+import axios from "axios";
+import ReactPlayer from "react-player";
+import { Helmet } from "react-helmet";
+
 const TournamentContent = () => {
+  const { id } = useParams<{ id: string }>();
+  const URL = "http://localhost:3080/tournaments/";
+  const [tournament, setTournament] = useState<ITournaments>({} as ITournaments);
+  useEffect(() => {
+    axios.get(URL + id).then(({ data }) => {
+      setTournament(data);
+      // console.log(data);
+      
+    });
+  }, [id]);
+
   return (
-    <section className="py-6 px-8 bg-black-500 w-full  letterCut rounded-sm border border-gray-400 border-opacity-20">
+    <section className="py-6 px-8 bg-black-500 w-full  letterCut rounded-sm ">
+      {/* Helmet config */}
+      <Helmet>
+        <title>{`${tournament.title} details`}</title>
+        <meta
+          name="description"
+          content={`Join to ${tournament.title} tournament now!`}
+        />
+      </Helmet>
       <div className="flex flex-col gap-8">
         {/* Tournaments Title */}
         <h5 className="text-white font-barlow font-bold text-2xl md:text-3xl tracking-wide uppercase border-b-2 border-b-gray-500 border-opacity-20 pb-4">
-          ZOMBIE LAND TOURNAMENT MAX
+          {tournament.title}
         </h5>
         <p className="font-poppins text-gray-400 text-left tracking-wide text-base font-semibold">
-          Excepteur sint occaecat atat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est labor umLor em ipsum dolor amet consteur
-          adiscing Duis elentum solliciin is yaugue euismods Nulla ullaorper.
-          Ipsum is simply dummy text of printing and typeetting industry. Lorem
-          Ipsum has been the industry's standsaard sipiscing Duis elementum
-          solliciin. Duis aute irure dolor in repderit in voluptate velit esse
-          cillum dolorliq commodo consequat.
+          {tournament.content}
         </p>
         <div className="flex items-center gap-4">
           <img src={image} alt="" className="w-16 h-16" />
           <p className="text-lg text-white italic tracking-wider font-poppins font-semibold">
-            Duis elentum solliciin is yaugue euismods Nulla ullaorper. Ipsum is
-            simply dummy text of printing and typeetting industry.
+            {tournament.quote}
           </p>
         </div>
         <p className="font-poppins text-gray-400 text-left tracking-wide text-base font-semibold">
-          Excepteur sint occaecat atat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est labor umLor em ipsum dolor amet consteur
-          adiscing Duis elentum solliciin is yaugue euismods Nulla ullaorper.
-          Ipsum is simply dummy text of printing and typeetting industry. Lorem
-          Ipsum has been the industry's standsaard sipiscing Duis elementum
-          solliciin. Duis aute irure dolor in repderit in voluptate velit esse
-          cillum dolorliq commodo consequat.
+          {tournament.content}
         </p>
-        <video controls className="w-full ">
-          <source
-            src="https://www.youtube.com/watch?v=ssrNcwxALS4"
-            type="video/mp4"
-          />
-          <source
-            src="https://www.youtube.com/watch?v=ssrNcwxALS4"
-            type="video/webm"
-          />
-          <source
-            src="https://www.youtube.com/watch?v=ssrNcwxALS4"
-            type="video/ogg"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <ReactPlayer className="w-full" url={tournament.promo} />
         <p className="font-poppins text-gray-400 text-left tracking-wide text-base font-semibold">
-          Excepteur sint occaecat atat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est labor umLor em ipsum dolor amet consteur
-          adiscing Duis elentum solliciin is yaugue euismods Nulla ullaorper.
-          Ipsum is simply dummy text of printing and typeetting industry. Lorem
-          Ipsum has been the industry's standsaard sipiscing Duis elementum
-          solliciin. Duis aute irure dolor in repderit in voluptate velit esse
-          cillum dolorliq commodo consequat.
+          {tournament.content}
         </p>
       </div>
       {/* Form to join tournament */}
-      <TournamentForm/>
+      <TournamentForm />
     </section>
   );
 };
