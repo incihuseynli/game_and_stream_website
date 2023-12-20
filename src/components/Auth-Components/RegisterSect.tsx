@@ -1,36 +1,57 @@
-import { EyeSlashIcon } from "@heroicons/react/24/solid";
 import Axios from "axios";
 import { useState } from "react";
 import { FormEvent } from "../../types";
+import SubmitBtn from "../Buttons/SubmitBtn";
+import toast, { Toaster } from "react-hot-toast";
 
 const RegisterSect = () => {
   interface IUser {
     email: string;
+    username: string;
   }
   const [username, setUsername] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [birthDate, setBirthDate] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const clearInputFields = () => {
+    setUsername("");
+    setEmail("");
+    setBirthDate("");
+    setPassword("");
+  };
+
   const handleRegister = async (e: FormEvent) => {
     e.preventDefault();
     const existingUsers = JSON.parse(localStorage.getItem("users") || "[]");
-    const isUserExist = existingUsers.some(
+    const isUsernameTaken = existingUsers.some(
+      (user: IUser) => user.username === username
+    );
+    const isEmailTaken = existingUsers.some(
       (user: IUser) => user.email === email
     );
-
+    // If someone has same username
+    if (isUsernameTaken) {
+      toast.error("Username is already taken. Please choose another.");
+      return;
+    }
     // For already existed users
-    if (isUserExist) {
-      console.log("User already exists");
+    if (isEmailTaken) {
+      toast.error("Email address is already registered. Please use another.");
       return;
     }
     // Adding New User
     const newUser = { username, password, email, birthDate };
     localStorage.setItem("users", JSON.stringify([...existingUsers, newUser]));
-    await Axios.post("http://localhost:5000/users", newUser);
+    await toast.promise(Axios.post("http://localhost:3080/users", newUser), {
+      loading: "Registering...",
+      success: () => {
+        clearInputFields();
+        return `Successfully! You can login now!`;
+      },
+      error: "Registration failed",
+    });
   };
-  /**
-   * TODO: only add id & email to LocalStorage other infos should go to json server
-   **/
+
   return (
     <section className="border border-gray-500 border-opacity-20 p-8 flex flex-col gap-4 shadow-xl">
       <h4 className="text-3xl font-barlow font-bold uppercase text-white">
@@ -47,6 +68,7 @@ const RegisterSect = () => {
           className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide  text-white"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <input
           type="text"
@@ -54,6 +76,7 @@ const RegisterSect = () => {
           className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          required
         />
         <input
           type="date"
@@ -61,31 +84,26 @@ const RegisterSect = () => {
           className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white"
           value={birthDate}
           onChange={(e) => setBirthDate(e.target.value)}
+          required
         />
         <div className="w-full flex items-center border border-gray-400 border-opacity-20 bg-black-800 rounded-sm outline-none focus-within:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white">
           <input
-            type="password"
+            type="text"
             placeholder="Password *"
             className="border-none p-4 mr-2 w-full h-full outline-none bg-transparent flex-1"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
-          <EyeSlashIcon className="w-4 h-4 mr-2 text-gray-500" />
         </div>
-        {/* <div className="w-full flex items-center border border-gray-400 border-opacity-20 bg-black-800 rounded-sm outline-none focus-within:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white">
-          <input
-            type="password"
-            placeholder="Confirm Password *"
-            className="border-none p-4 mr-2 w-full h-full outline-none bg-transparent flex-1"
-          />
-          <EyeSlashIcon className="w-4 h-4 mr-2 text-gray-500" />
-        </div> */}
         <div className="flex  gap-2">
           <input
             type="checkbox"
             name=""
             id="policy"
+            checked={true}
             className="accent-primary-green-300 w-4 h-4"
+            required
           />
           <span className="text-sm -mt-1 font-poppins font-medium text-white">
             You're accepting personal data will be used to support your
@@ -97,11 +115,8 @@ const RegisterSect = () => {
             .
           </span>
         </div>
-        <input
-          type="submit"
-          value="Sign in"
-          className="mt-6 w-40 text-white font-barlow font-bold tracking-wide uppercase text-base bg-primary-green-500 hover:bg-secondary-yellow-500 transition-all duration-700 py-4 px-8 rounded-sm"
-        />
+        <SubmitBtn value="Sign in" />
+        <Toaster position="bottom-right" reverseOrder={true} />
       </form>
     </section>
   );
