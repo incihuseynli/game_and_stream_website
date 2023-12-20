@@ -1,20 +1,37 @@
 import NavLinks from "./NavLinks";
-import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/solid";
+import {
+  ArrowLeftOnRectangleIcon,
+  ArrowRightOnRectangleIcon,
+} from "@heroicons/react/24/solid";
 import { styles } from "../../styles";
 import { NavLink } from "react-router-dom";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { useState } from "react";
 import CloseBtn from "../Buttons/CloseBtn";
 import MobileBtn from "../Buttons/MobileBtn";
-
+import { useAuth } from "../ContextAPI/AuthContext";
+import logo from "/logo.png";
+import clickBtn from "/click1.mp3";
+import image from "/streamer1.png";
+import logoMobile from "/logo2.png"
 const Header = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1024px)");
   const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { isLogged, handleLogout } = useAuth();
+
+  const logout = () => {
+    handleLogout();
+    clickSound();
+  };
+  const clickSound = (): void => {
+    new Audio(clickBtn).play();
+  };
+
   return (
     <nav className={`${styles.flexBetween} ${styles.padding} gap-16 w-full`}>
       <NavLink to="/">
-        <img src="./logo.png" alt="logo" />
+        <img src={logo} alt="logo" />
       </NavLink>
       <div className={`${styles.flexBetween} lg:w-full`}>
         <div className={`${styles.flexBetween} w-full`}>
@@ -42,7 +59,7 @@ const Header = () => {
                     <div className={`${styles.flexBetween} gap-4`}>
                       <NavLink to="/">
                         <img
-                          src="./logo2.png"
+                          src={logoMobile}
                           className="w-10 h-10 object-cover"
                           alt="logo"
                         />
@@ -74,20 +91,40 @@ const Header = () => {
             </div>
           )}
           {/* Sign in/ Profile Button */}
-          <NavLink
-            to="/auth"
-            className={`${
-              isAboveSmallScreens ? "w-36 h-14  py-3  btnClip" : "w-10 h-10 "
-            } text-center text-white text-lg uppercase font-medium tracking-wider`}
-          >
-            {isAboveSmallScreens ? (
-              "Sign in"
-            ) : (
-              <div className="text-primary-green-500">
-                <ArrowLeftOnRectangleIcon />
+          {isLogged ? (
+            <div className="flex items-baseline gap-4">
+              <NavLink to="/auth">
+                <img
+                  src={image}
+                  alt=""
+                  className="rounded-full w-14 h-12 object-cover"
+                />
+              </NavLink>
+
+              <div
+                className="text-primary-green-500 w-10 h-10"
+                onClick={logout}
+              >
+                <ArrowRightOnRectangleIcon />
               </div>
-            )}
-          </NavLink>
+            </div>
+          ) : (
+            <NavLink
+              to="/auth"
+              onClick={clickSound}
+              className={`${
+                isAboveSmallScreens ? "w-36 h-14  py-3  btnClip" : "w-10 h-10 "
+              } text-center text-white text-lg uppercase font-medium tracking-wider`}
+            >
+              {isAboveSmallScreens ? (
+                "Sign in"
+              ) : (
+                <div className="text-primary-green-500">
+                  <ArrowLeftOnRectangleIcon />
+                </div>
+              )}
+            </NavLink>
+          )}
         </div>
       </div>
     </nav>
