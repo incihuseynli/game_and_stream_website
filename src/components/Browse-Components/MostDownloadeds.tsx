@@ -4,7 +4,6 @@ import {
   StarIcon,
 } from "@heroicons/react/24/solid";
 import { styles } from "../../styles";
-import BtnText from "../Buttons/BtnText";
 import TopList from "../Global-Components/TopList";
 import { useEffect, useState } from "react";
 import { IGame } from "../../types";
@@ -52,9 +51,12 @@ const MostDownloadeds = () => {
                   <div className={`${styles.flexBetween} w-full gap-2`}>
                     <div className="flex flex-col gap-1">
                       {/* GAME NAME */}
-                      <h6 className="text-lg capitalize font-barlow font-bold text-white truncate w-24">
+                      <NavLink
+                        to={`/browse/${id}`}
+                        className="text-lg capitalize font-barlow font-bold text-white truncate w-24"
+                      >
                         {title}
-                      </h6>
+                      </NavLink>
                       {/* GAME COMPANY */}
                       <span className="text-xs capitalize text-gray-500 font-poppins font-bold tracking-wider">
                         {publisher}
@@ -94,7 +96,6 @@ const MostDownloadeds = () => {
           }
         )}
       </div>
-      <BtnText children="View all games" path="/browse" />
     </TopList>
   );
 };
