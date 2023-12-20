@@ -1,7 +1,6 @@
 import AnimatedRoutes from "./PageRouting/AnimatedRoutes";
 import AnimatedCursorComponent from "./components/Global-Components/AnimatedCursorComponent";
 import ToTop from "./components/Footer-Components/ToTop";
-
 function App() {
   return (
     <>
