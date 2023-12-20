@@ -1,9 +1,7 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-// import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import "../../swiperCss.css";
 import { styles } from "../../styles";
@@ -43,7 +41,7 @@ const GameSlider = () => {
         loop={true}
         pagination={{ clickable: true }}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper gameListSwiper"
+        className="mySwiper gameListSwiper "
         style={{
           "--swiper-pagination-bullet-width": "5rem",
           "--swiper-pagination-bullet-height": ".3rem",
