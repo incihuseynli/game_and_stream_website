@@ -10,7 +10,7 @@ export default {
         'streamer' : "url('./bgStreamer.jpg')",
       },
       gridTemplateColumns: {
-        'browse' : '800px 400px',
+        'browse' : '700px 400px',
       },
       colors: {
         "primary-green-300": "#45f983",
