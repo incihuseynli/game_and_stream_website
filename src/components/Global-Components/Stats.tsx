@@ -5,9 +5,11 @@ import CountUp from "react-countup";
 import SectionHead from "./SectionHead";
 import Reveal from "../../transitions/Reveal";
 import { stats } from "../../Db/datas";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Stats = () => {
   const [counterOn, setCounterOn] = useState<boolean>(false);
+  const isAboveMediumScreens = useMediaQuery("(min-width:1040px)");
   return (
     <section className="mt-36 mb-24 flex flex-col gap-24">
       {/* Section Head */}
@@ -20,7 +22,14 @@ const Stats = () => {
           {stats.map(({ id, image, title, end }) => {
             return (
               <div
-                className="w-40 font-barlow font-bold flex flex-col items-center text-center md:even:border-none md:even:pr-0 lg:even:border-r lg:even:pr-24 md:last:border-none  md:last:pr-0 md:border-r md:border-gray-500 md:border-opacity-30 md:pr-24"
+                className={`
+                ${
+                  isAboveMediumScreens
+                    ? "border-r border-gray-500 border-opacity-30 last:border-none last:pr-0 pr-24"
+                    : "border-none"
+                }
+                w-40 font-barlow font-bold flex flex-col items-center text-center
+                `}
                 key={id}
               >
                 <img

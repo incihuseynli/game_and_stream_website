@@ -11,7 +11,7 @@ const StreamGuide = () => {
       className={`${styles.padding} grid grid-cols-1 lg:grid-cols-2 gap-20`}
     >
       {/* Left Side */}
-      <div className="flex flex-col gap-6 lg:border-r-8 lg:border-r-primary-green-300 lg:relative">
+      <div className="flex flex-col gap-6 items-center justify-center lg:items-start lg:justify-normal lg:border-r-8 lg:border-r-primary-green-300 lg:relative">
         <h4 className="font-barlow font-bold text-4xl lg:text-7xl text-white text-center lg:text-left">
           How to start stream guide
         </h4>
@@ -32,7 +32,7 @@ const StreamGuide = () => {
         </div>
       </div>
       {/* Right Side */}
-      <div className="ml-4 flex flex-col gap-8">
+      <div className="ml-4 flex flex-col gap-8 items-center lg:items-start">
         {/* Card */}
         <div className="relative z-0 w-full md:w-96">
           <div className=" h-56 bg-black-800 py-8 px-4 rounded-xl flex flex-col  gap-2 shadow-2xl border border-opacity-30 border-primary-green-300 hover:border-secondary-yellow-500 transition-all duration-700">
