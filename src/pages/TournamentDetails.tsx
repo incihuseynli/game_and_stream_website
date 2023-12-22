@@ -9,7 +9,7 @@ const TournamentDetails = () => {
     <PageTransition>
       {/* Main Section */}
       <main
-        className={`${styles.paddingX} py-14 grid grid-cols-1 lg:grid-cols-browse gap-5`}
+        className={`${styles.paddingX} py-14 grid grid-cols-1 lg:grid-cols-[800px_400px] gap-5`}
       >
         {/* Content of Tournament */}
         <Reveal>
