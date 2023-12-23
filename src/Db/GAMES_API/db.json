@@ -1193,6 +1193,13 @@
       "playingHours": 1245,
       "games": 12,
       "image": "./streamer4.png"
+    },
+    {
+      "username": "test",
+      "password": "123456",
+      "email": "test@email.com",
+      "birthDate": "2023-12-23",
+      "id": 9
     }
   ]
 }
