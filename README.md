@@ -24,14 +24,19 @@ This is a website example for games and streaming platforms. Design inspired fro
 ![](./public/mobile.png)
 ![](./public/tablet.png)
 
-
-
 ### Installation
 
 To run project locally wrote code line below in terminal of project root
 
 ```bash
 npm run dev
+```
+
+For json-server :
+
+```
+cd src/Db/GAMES_API
+json-server --watch db.json -p 3080
 ```
 
 ## Technologies that I used for this project
@@ -114,7 +119,6 @@ npm i axios
 ```
 npm i react-hot-toast
 ```
-
 
 ## Contributing
 
