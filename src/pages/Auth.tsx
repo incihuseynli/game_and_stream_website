@@ -16,14 +16,16 @@ const Auth = () => {
     <PageTransition>
       {/* Helmet Config */}
       <Helmet>
-        <title>{isLogged ? "My Account" : "Login/Registeration Page"}</title>
+        {/* <title>{isLogged ? "My Account" : "Login/Registeration Page"}</title> */}
+        <title>{isLogged ? "Profilim" : "Giriş et və ya qeydiyyatdan keç"}</title>
         <meta
           name="description"
           content="My Account page of Games and streams website"
         />
       </Helmet>
       {/* Header Section */}
-      <PageHead pageTitle="My account" image={image} />
+      {/* <PageHead pageTitle="My account" image={image} /> */}
+      <PageHead pageTitle={isLogged ? "Profilim" : "Giriş / Qeydiyyat"} image={image} />
       {/* Main Section */}
       <main className={`${styles.paddingX} py-24`}>
         {isLogged ? (

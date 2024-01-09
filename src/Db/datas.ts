@@ -155,25 +155,29 @@ export const stats: IStats[] = [
   {
     id: 1,
     image: "./Playstation.svg",
-    title: "Players",
+    // title: "Players",
+    title : "İstifadəçilər",
     end: 1368,
   },
   {
     id: 2,
     image: "./streamer.svg",
-    title: "Streamer",
+    // title: "Streamer",
+    title : "Yayımçılar",
     end: 569,
   },
   {
     id: 3,
     image: "./dice.svg",
-    title: "Games",
+    // title: "Games",
+    title : "Oyunlar",
     end: 748,
   },
   {
     id: 4,
     image: "./Cup.svg",
-    title: "Tournaments",
+    // title: "Tournaments",
+    title : "Müsabiqələr",
     end: 327,
   },
 ];

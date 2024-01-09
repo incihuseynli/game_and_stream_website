@@ -170,10 +170,11 @@ body {
   position: relative;
 }
 .text::before {
-  content: "Join us";
+  /* content: "Join us"; */
+  content: "Bizə qoşul";
   position: absolute;
   /* top: -5.5rem; */
-  @apply -top-14 lg:-top-20;
+  @apply -top-14 lg:-top-[76px];
   @apply text-7xl lg:text-8xl;
   @apply text-black-800;
   opacity: 0.2;

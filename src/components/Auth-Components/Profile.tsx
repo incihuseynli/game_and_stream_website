@@ -34,6 +34,7 @@ const Profile = () => {
       // console.log(data);
     });
   }, []);
+
   return (
     <section className="flex flex-col gap-44 relative">
       {isAboveSmallScreens && <FloatingDashes />}
@@ -53,48 +54,53 @@ const Profile = () => {
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary-green-300 circle"></span>
                   <span className="text-xs uppercase text-primary-green-300 font-bold tracking-wider online">
-                    Online
+                    {/* Online */}
+                    Onlayn
                   </span>
                 </div>
                 <h4 className="font-barlow font-bold text-xl tracking-wide text-white capitalize">
                   {userInfo.username}
                 </h4>
                 <p className="text-xs font-poppins text-gray-400 font-medium w-3/4 text-center lg:text-left">
-                  You Haven't Gone Live yet. Go Live By Touching The Button
-                  Below.
+                  {/* You Haven't Gone Live yet. Go Live By Touching The Button
+                    Below. */}
+                  {userInfo.streamCount?.toString().length > 0
+                    ? "Yeni yayım başlatmaq üçün aşağıdakı düyməni klik edin."
+                    : "Hələ ki canlı yayım açmamısınız. Canlı yayım başlatmaq üçün aşağıdakı düyməni klik edin."}
                 </p>
                 <button className="w-fit mt-5 border border-primary-green-300 rounded-md text-center py-3 px-6 text-white font-poppins font-bold text-sm bg-transparent hover:bg-primary-green-300 transition-all duration-700 hover:text-black-500">
-                  Start live stream
+                  {/* Start live stream */}
+                  Canlı yayıma başla
                 </button>
               </div>
               {/* Right side */}
               <ul className="mt-4 lg:mt-0 bg-black-800 rounded-xl p-4 flex flex-col  gap-4  items-center lg:items-start">
                 <li className="flex items-center justify-between w-56 border-b border-b-gray-400 border-opacity-10 pb-4 font-poppins font-bold text-white text-sm">
-                  Games{" "}
+                  Oyunlar{" "}
                   <span className="text-primary-green-300">
                     {userInfo.games}
                   </span>
                 </li>
                 <li className="flex items-center justify-between w-56 border-b border-b-gray-400 border-opacity-10 pb-4 font-poppins font-bold text-white text-sm">
-                  Followers{" "}
+                  Izləyicilər{" "}
                   <span className="text-primary-green-300">
                     {followers.length}
                   </span>
                 </li>
                 <li className="flex items-center justify-between w-56 border-b border-b-gray-400 border-opacity-10 pb-4 font-poppins font-bold text-white text-sm">
-                  Following{" "}
+                  İzlənənlər{" "}
                   <span className="text-primary-green-300">
                     {following.length}
                   </span>
                 </li>
                 <li className="flex items-center justify-between w-56 border-b border-b-gray-400 border-opacity-10 pb-4 font-poppins font-bold text-white text-sm">
-                  Live Stream{" "}
+                  Canlı yayım{" "}
                   <span className="text-primary-green-300">
                     {userInfo.streamCount}
                   </span>
                 </li>
                 <li className="flex items-center justify-between w-56  font-poppins font-bold text-white text-sm">
-                  Play Hours{" "}
+                  Oyun saatları{" "}
                   <span className="text-primary-green-300">
                     {userInfo.playingHours}
                   </span>
@@ -107,7 +113,8 @@ const Profile = () => {
             className={`bg-black-500 rounded-xl w-full lg:w-3/4 ${styles.padding} ${styles.flexCenter} flex-col gap-8`}
           >
             <h5 className="font-barlow font-bold text-white text-center text-2xl uppercase">
-              Profile Details
+              {/* Profile Details */}
+              Hesab ayarları
             </h5>
             <div className="flex flex-col gap-6 w-full">
               <div className="flex flex-col md:flex-row gap-4">
@@ -127,7 +134,7 @@ const Profile = () => {
               <div className="flex flex-col md:flex-row gap-4">
                 <input
                   type="text"
-                  value={`PLAYER ID:  player_000${userInfo.id}`}
+                  value={`İstifadəçi ID:  player_000${userInfo.id}`}
                   className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide text-white"
                   disabled
                 />
@@ -144,7 +151,8 @@ const Profile = () => {
               {/* TABS */}
               <div>
                 <button className="font-barlow font-bold text-xl tracking-wide uppercase text-primary-green-300 hover:text-primary-green-800 transition-all duration-500">
-                  Followers
+                  {/* Followers */}
+                  İzləyiclər
                 </button>
                 <ul
                   className={`pr-12 py-6 flex flex-col gap-4 h-96 overflow-y-scroll`}
@@ -177,7 +185,7 @@ const Profile = () => {
                         rounded-3xl py-2 px-3 text-white font-poppins font-bold text-sm capitalize text-center  transition-all duration-500 w-fit
                         `}
                         >
-                          {isFollowed ? "Followed" : "Follow"}
+                          {isFollowed ? "İzlənir" : "İzlə"}
                         </button>
                       </li>
                     );
@@ -186,7 +194,8 @@ const Profile = () => {
               </div>
               <div className="md:pl-4 pt-6 md:pt-0 border-t border-t-gray-600 border-opacity-20 md:border-none">
                 <button className="flex font-barlow font-bold text-xl tracking-wide uppercase text-primary-green-300 hover:text-primary-green-800 transition-all duration-500">
-                  Following
+                  {/* Following */}
+                  İzlənilənlər
                 </button>
                 <ul
                   className={`pr-12 py-6 flex flex-col gap-4 h-96 overflow-y-scroll`}
@@ -221,7 +230,7 @@ const Profile = () => {
                         rounded-3xl py-2 px-3 text-white font-poppins font-bold text-sm capitalize text-center  transition-all duration-500 w-fit
                         `}
                           >
-                            {isFollowed ? "Followed" : "Follow"}
+                            {isFollowed ? "İzlənir" : "İzlə"}
                           </button>
                         </li>
                       );
@@ -238,10 +247,11 @@ const Profile = () => {
           className={`${styles.flexCenter} flex-col w-full gap-12 text-center`}
         >
           {/* Section Head */}
-          <SectionHead
+          {/* <SectionHead
             headTitle="Become streamer"
             title="How To Start Your Live Stream"
-          />
+          /> */}
+          <SectionHead headTitle="Yayımçı ol" title="Necə başlaya bilərsən" />
           {/* Cards */}
           <div
             className={`bg-black-500 ${styles.paddingX}  py-20 w--4/5 rounded-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-10`}
@@ -250,12 +260,15 @@ const Profile = () => {
             <div className="relative z-0">
               <div className=" h-56 bg-black-800 py-8 px-4 rounded-xl flex flex-col gap-2 shadow-2xl border border-opacity-30 border-primary-green-300 hover:border-secondary-yellow-500 transition-all duration-700">
                 <UserCircleIcon className="w-14 h-14 object-contain  text-primary-green-300" />
-                <h6 className="font-barlow font-semibold text-xl text-white">
-                  Go To Your Profile
+                <h6 className="font-barlow font-semibold text-xl text-white text-left">
+                  {/* Go To Your Profile */}
+                  İstifadəçi Profilinə keçid
                 </h6>
                 <p className="font-poppins text-sm text-gray-400 font-medium tracking-wide  text-left first-letter:capitalize">
-                  To start your stream you should go to your profile page in
-                  first.
+                  {/* To start your stream you should go to your profile page in
+                  first. */}
+                  Yayımınıza başlamaq üçün əvvəlcə profil səhifənizə
+                  keçməlisiniz.
                 </p>
               </div>
               <div className="hidden lg:block absolute -right-12 top-1/2 w-12 border-4 border-dashed border-primary-green-300 rotate-180 -z-10"></div>
@@ -264,12 +277,15 @@ const Profile = () => {
             <div className="relative z-0">
               <div className=" h-56 bg-black-800 py-8 px-4 rounded-xl flex flex-col gap-2 shadow-2xl border border-opacity-30 border-primary-green-300 hover:border-secondary-yellow-500 transition-all duration-700">
                 <PlayCircleIcon className="w-14 h-14 object-contain  text-primary-green-300" />
-                <h6 className="font-barlow font-semibold text-xl text-white">
-                  Live Stream Button
+                <h6 className="font-barlow font-semibold text-xl text-white text-left">
+                  {/* Live Stream Button */}
+                  Canlı Yayına Başla Düyməsi
                 </h6>
                 <p className="font-poppins text-sm text-gray-400 font-medium tracking-wide  text-left first-letter:capitalize">
-                  To be able to stream you should click "Start Live Stream"
-                  button.
+                  {/* To be able to stream you should click "Start Live Stream"
+                  button. */}
+                  Yayımınızı başlatmaq üçün "Canlı Yayımı Başlat" düyməsini
+                  aktiv edin.
                 </p>
               </div>
               <div className="hidden lg:block absolute -right-12 top-1/2 w-12 border-4 border-dashed border-primary-green-300 rotate-180 -z-10"></div>
@@ -278,12 +294,15 @@ const Profile = () => {
             <div className="relative z-0">
               <div className="h-56 bg-black-800 py-8 px-4 rounded-xl flex flex-col gap-2 shadow-2xl border border-opacity-30 border-primary-green-300 hover:border-secondary-yellow-500 transition-all duration-700">
                 <VideoCameraIcon className="w-14 h-14 object-contain  text-primary-green-300" />
-                <h6 className="font-barlow font-semibold text-xl text-white">
-                  You Are Live
+                <h6 className="font-barlow font-semibold text-xl text-white text-left">
+                  {/* You Are Live */}
+                  Siz canlı yayımdasınız
                 </h6>
                 <p className="font-poppins text-sm text-gray-400 font-medium tracking-wide  text-left first-letter:capitalize">
-                  Clicking the button will send you a Twitch. Now you can start
-                  streaming via Twitch.
+                  {/* Clicking the button will send you a Twitch. Now you can start
+                  streaming via Twitch. */}
+                  Düyməni klikləməklə siz Twitch yönləndiriləcəksiniz. İndi
+                  Twitch vasitəsilə yayıma başlaya bilərsiniz.
                 </p>
               </div>
             </div>

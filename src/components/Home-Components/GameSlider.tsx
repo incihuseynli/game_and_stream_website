@@ -69,7 +69,8 @@ const GameSlider = () => {
                   {title}
                 </NavLink>
                 <span className="font-barlow text-lg uppercase font-semibold tracking-wide text-secondary-yellow-500">
-                  RATE {ratePer}
+                  Reytinq {ratePer}
+                  {/* RATE {ratePer} */}
                 </span>
               </div>
             </SwiperSlide>

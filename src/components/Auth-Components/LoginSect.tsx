@@ -46,7 +46,8 @@ const LoginSect: React.FC<LoginSectProps> = ({ onLogin }) => {
   return (
     <section className="border border-gray-500 border-opacity-20 p-8 flex flex-col gap-4 shadow-xl">
       <h4 className="text-3xl font-barlow font-bold uppercase text-white">
-        Login
+        {/* Login */}
+        Giriş
       </h4>
       <p className="mt-2 font-poppins text-gray-400 text-left tracking-wide text-base font-medium">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto,
@@ -66,7 +67,7 @@ const LoginSect: React.FC<LoginSectProps> = ({ onLogin }) => {
         <div className="w-full flex items-center border border-gray-400 border-opacity-20 bg-black-800 rounded-sm outline-none focus-within:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white">
           <input
             type={showPassword ? "text" : "password"}
-            placeholder="Password *"
+            placeholder="Şifrə *"
             className="border-none p-4 mr-2 w-full h-full outline-none bg-transparent flex-1"
             value={password}
             required
@@ -97,18 +98,21 @@ const LoginSect: React.FC<LoginSectProps> = ({ onLogin }) => {
               onChange={() => setRememberMe(!rememberMe)}
             />
             <span className="text-sm font-poppins font-medium text-white">
-              Remember me
+              {/* Remember me */}
+              Məni xatırla
             </span>
           </div>
           <NavLink
             to="/auth/lost-password"
             className="text-sm font-poppins font-medium text-primary-green-300 tracking-wide hover:text-secondary-yellow-500 transition-all duration-500"
           >
-            Lost your password?
+            {/* Lost your password? */}
+            Şifrənizi unutmusunuz?
           </NavLink>
         </div>
 
-        <SubmitBtn value="Log in" />
+        {/* <SubmitBtn value="Log in" /> */}
+        <SubmitBtn value="Giriş et" />
       </form>
     </section>
   );

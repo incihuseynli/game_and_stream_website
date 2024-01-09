@@ -19,7 +19,8 @@ const TournamentsList = () => {
       className={`${styles.paddingX} py-16 ${styles.flexCenter} font-barlow w-full flex-col gap-12 bg-streamers bg-no-repeat bg-cover bg-center  bg-opacity-60`}
     >
       {/* Section Head */}
-      <SectionHead headTitle="TOURNAMENT LIST" title="ACTIVE TOURNAMENTS" />
+      {/* <SectionHead headTitle="TOURNAMENT LIST" title="ACTIVE TOURNAMENTS" /> */}
+      <SectionHead headTitle="Müsabiqələrin siyahısı" title="Aktiv Müsabiqələrimiz" />
       {/* Tournament Lists */}
       <div className={`${styles.flexCenter} flex-col gap-10 w-full`}>
         {/* Tournament List Item */}
@@ -50,13 +51,14 @@ const TournamentsList = () => {
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-primary-green-300 circle"></span>
                     <span className="text-xs uppercase text-primary-green-300 font-bold tracking-wider online">
-                      {`${isOnline ? "online" : "offline"}`}
+                      {`${isOnline ? "onlayn" : "oflayn"}`}
                     </span>
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <h5 className="text-gray-500 text-base uppercase font-bold">
-                    Prize
+                    {/* Prize */}
+                    Mükafat
                   </h5>
                   <div className="flex items-center gap-2">
                     <img src="./Cup.svg" className="w-5 h-5"></img>
@@ -67,7 +69,8 @@ const TournamentsList = () => {
                 </div>
                 <div className="flex flex-col gap-2">
                   <h5 className="text-gray-500 text-base uppercase font-bold">
-                    Time
+                    {/* Time */}
+                    Vaxt aralığı
                   </h5>
                   <div className="flex items-center gap-2">
                     <ClockIcon className="w-5 h-5 text-gray-500" />
@@ -80,7 +83,8 @@ const TournamentsList = () => {
                   to={live_link}
                   className="text-gray-400 text-sm tracking-wide rounded-md uppercase font-bold bg-black-500 py-4 px-6 flex items-center gap-2 mx-auto lg:mx-0  hover:text-secondary-yellow-500 transition-all duration-700 hover:shadow-2xl"
                 >
-                  Live now <PlayCircleIcon className="w-4 h-4 " />
+                  {/* Live now  */} İndi canlı
+                  <PlayCircleIcon className="w-4 h-4 " />
                 </NavLink>
               </div>
             );

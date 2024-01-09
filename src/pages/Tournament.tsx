@@ -11,14 +11,18 @@ const Tournament = () => {
     <PageTransition>
       {/* Helmet config */}
       <Helmet>
-        <title>Tournaments</title>
+        <title>
+          {/* Tournaments */}
+          Müsabiqələrimiz
+          </title>
         <meta
           name="description"
           content="Join our tournaments and earn more than money"
         />
       </Helmet>
       {/* Header */}
-      <PageHead image={image} pageTitle="Tournaments" />
+      {/* <PageHead image={image} pageTitle="Tournaments" /> */}
+      <PageHead image={image} pageTitle="Müsabiqələrimiz" />
       {/* Main */}
       <main>
         {/* Prizes */}

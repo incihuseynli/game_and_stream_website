@@ -20,7 +20,7 @@ const PrizeCard = () => {
         ({ id, prize, status, place_count, top_three_players, endDate }) => {
           // console.log(Array.isArray(top_three_players));
 
-          const isLuckyCard = status === "lucky card";
+          const isLuckyCard = status === "uğurlu kard";
           return (
             <div
               className="relative flex flex-col gap-6 font-barlow w-96 bg-black-500 rounded-lg px-4 py-8 hover:-translate-y-3 transition-all duration-700"
@@ -53,8 +53,8 @@ const PrizeCard = () => {
                 }
                 uppercase font-bold text-center  mt-6`}
                 >
-                  <span className="text-white text-base">Tournament</span>
-                  <h5 className="text-3xl">OF {status}</h5>
+                  <span className="text-white text-base font-poppins">Müsabiqə</span>
+                  <h5 className="text-3xl">{status}</h5>
                 </div>
                 {/* Prize Places */}
                 <div
@@ -66,7 +66,8 @@ const PrizeCard = () => {
                     className="text-secondary-yellow-500 w-6 h-6"
                   />
                   <h5 className="text-gray-300 font-bold text-lg uppercase tracking-wide">
-                    {place_count} Prize Places
+                    {place_count} Mükafat yeri
+                    {/* Prize Places */}
                   </h5>
                 </div>
                 {/* Lists */}
@@ -100,7 +101,8 @@ const PrizeCard = () => {
                       );
                     })}
                 </div>
-                <BtnText children="Join Now" path={`/tournament/${id}`} />
+                {/* <BtnText children="Join Now" path={`/tournament/${id}`} /> */}
+                <BtnText children="İndi Qoşul" path={`/tournament/${id}`} />
               </div>
             </div>
           );

@@ -6,7 +6,6 @@ const AuthContext = createContext<IAuthContext | undefined>(undefined);
 
 export const AuthProvider = ({ children }: IContext) => {
   const [isLogged, setIsLogged] = useState<boolean>(false);
-
   const handleLogin = () => {
     setIsLogged(true);
   };

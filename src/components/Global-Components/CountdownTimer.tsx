@@ -29,50 +29,54 @@ const CountdownTimer: React.FC<{ endDate: string }> = ({ endDate }) => {
   }, [timeLeft]);
 
   return (
-    <div className=" absolute right-0 top-0 p-4 rounded-t-xl rounded-bl-xl ">
+    <div className="font-poppins absolute right-0 top-0 p-4 rounded-t-xl rounded-bl-xl ">
       <div className="flex">
         <div className="flex flex-col items-center">
           {timeLeft.days > 0 && (
-            <span className="text-white font-medium tracking-wide text-sm">
+            <span className="text-white font-medium tracking-wide text-xs">
               {timeLeft.days}
             </span>
           )}
 
-          <span className="uppercase text-base font-bold tracking-wide text-gray-500">
-            Day
+          <span className="uppercase text-sm font-bold tracking-wide text-gray-500">
+            {/* Day */}
+            GÜN
           </span>
         </div>
         <span className="text-base text-gray-500 mx-2  -mt-1">:</span>
         <div className="flex flex-col items-center">
           {timeLeft.hours > 0 && (
-            <span className="text-white font-medium tracking-wide text-sm">
+            <span className="text-white font-medium tracking-wide text-xs">
               {timeLeft.hours}
             </span>
           )}
-          <span className="uppercase text-base font-bold tracking-wide text-gray-500">
-            Hour
+          <span className="uppercase text-sm font-bold tracking-wide text-gray-500">
+            {/* Hour */}
+            Saat
           </span>
         </div>
         <span className="text-base text-gray-500 mx-2  -mt-1">:</span>
         <div className="flex flex-col items-center">
           {timeLeft.minutes > 0 && (
-            <span className="text-white font-medium tracking-wide text-sm">
+            <span className="text-white font-medium tracking-wide text-xs">
               {timeLeft.minutes}
             </span>
           )}
-          <span className="uppercase text-base font-bold tracking-wide text-gray-500">
-            Min
+          <span className="uppercase text-sm font-bold tracking-wide text-gray-500">
+            {/* Min */}
+            Dəq
           </span>
         </div>
         <span className="text-base text-gray-500 mx-2  -mt-1">:</span>
         <div className="flex flex-col items-center">
           {timeLeft.seconds > 0 && (
-            <span className="text-white font-medium tracking-wide text-sm">
+            <span className="text-white font-medium tracking-wide text-xs">
               {timeLeft.seconds}
             </span>
           )}
-          <span className="uppercase text-base font-bold tracking-wide text-gray-500">
-            sec
+          <span className="uppercase text-sm font-bold tracking-wide text-gray-500">
+            {/* sec */}
+            San
           </span>
         </div>
       </div>

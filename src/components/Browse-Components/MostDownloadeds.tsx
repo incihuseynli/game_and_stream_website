@@ -32,7 +32,8 @@ const MostDownloadeds = () => {
     handleData();
   }, []);
   return (
-    <TopList secTitle="Top Downloaded Games">
+    // <TopList secTitle="Top Downloaded Games">
+    <TopList secTitle="Ən çox yüklənən oyunlar">
       <div className={`${styles.flexCenter} flex-col gap-4 `}>
         {/* TOP GAMES LIMIT = 3 */}
         {games.map(

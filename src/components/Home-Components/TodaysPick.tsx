@@ -26,7 +26,8 @@ const TodaysPick = () => {
       className={`${styles.padding} my-36 ${styles.flexCenter} flex-col gap-20 relative`}
     >
       {/* SECTION HEAD */}
-      <SectionHead headTitle="Today's Game" title="Top Rated Game Of Today" />
+      {/* <SectionHead headTitle="Today's Game" title="Top Rated Game Of Today" /> */}
+      <SectionHead headTitle="Günün oyunu" title="Günün Ən Reytinqli Oyunu" />
       {/* GAME SHOWCASE */}
       {games.map(({ id, game_url, title, thumbnail, short_desc, ratePer }) => {
         return (
@@ -47,12 +48,14 @@ const TodaysPick = () => {
                   {title}
                 </h5>
                 <span className="font-barlow text-lg uppercase font-semibold tracking-wide text-secondary-yellow-500">
-                  RATE {ratePer}
+                  {/* RATE {ratePer} */}
+                  Reytinq: {ratePer}
                 </span>
                 <p className="mb-10 mt-4 w-4/5 text-gray-50 text-sm md:text-base tracking-wider font-poppins text-center md:text-left">
                   {short_desc}
                 </p>
-                <Btn children="Play Now" path={game_url} />
+                {/* <Btn children="Play Now" path={game_url} /> */}
+                <Btn children="İndi oyna" path={game_url} />
               </div>
             </div>
           </Reveal>

@@ -10,7 +10,8 @@ const SliderSect = () => {
   return (
     <StreamersAPI>
       {(streamers: IStreamers[]) => (
-        <SmallSlider secTitle="Current Top Live Streams">
+        // <SmallSlider secTitle="Current Top Live Streams">
+        <SmallSlider secTitle="Ən çox izlənilən canlı yayımlar">
           {streamers.map(
             ({
               id,
@@ -68,7 +69,7 @@ const SliderSect = () => {
                     </div>
                   </div>
                   <div className="text-white font-bold font-barlow tracking-wider text-base capitalize absolute -bottom-6 left-10 hidden swiperHover p-2 bg-primary-green-300">
-                    {current_watchers} Streaming
+                    {current_watchers} insan izləyir
                   </div>
                 </SwiperSlide>
               );

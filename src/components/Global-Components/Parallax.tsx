@@ -24,9 +24,10 @@ const Parallax = () => {
           <PlayCircleIcon />
         </button>
         <h1 className="font-barlow font-bold uppercase tracking-wider text-white text-4xl relative z-10">
-          JOIN THE <span className="text-primary-green-300">COMMUNITY</span>
+          {/* JOIN THE <span className="text-primary-green-300">COMMUNITY</span> */}
+           <span className="text-primary-green-300">Qrupumuza</span> qoşul
         </h1>
-        <Btn children="Join now" path={`https://discord.com${"_blank"}`} />
+        <Btn children="İndi qoşul" path={`https://discord.com${"_blank"}`} />
       </motion.div>
 
       <motion.div

@@ -10,7 +10,7 @@ const SubmitBtn = ({value}:IProps) => {
     <input
       type="submit"
       value={value}
-      className="mt-6 w-fit text-white font-barlow font-bold tracking-wide uppercase text-base bg-primary-green-500 hover:bg-secondary-yellow-500 transition-all duration-700 py-4 px-8 rounded-sm"
+      className="mt-6 w-fit text-white font-poppins font-bold tracking-wide uppercase text-base bg-primary-green-500 hover:bg-secondary-yellow-500 transition-all duration-700 py-4 px-8 rounded-sm"
       onClick={clickSound}
     />
   );

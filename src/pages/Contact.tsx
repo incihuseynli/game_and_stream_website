@@ -19,11 +19,15 @@ const Contact = () => {
     <PageTransition>
       {/* Helmet config */}
       <Helmet>
-        <title>Contact Us</title>
+        <title>
+          {/* Contact Us */}
+         Bizimlə Əlaqə
+          </title>
         <meta name="description" content="Contact with us" />
       </Helmet>
       {/* Header */}
-      <PageHead image={image} pageTitle="Contact Us" />
+      {/* <PageHead image={image} pageTitle="Contact Us" /> */}
+      <PageHead image={image} pageTitle="Bizimlə əlaqə" />
       {/* Main Section */}
       <main>
         {/* Contact Section */}
@@ -34,7 +38,8 @@ const Contact = () => {
             {/* Contact content */}
             <div className="flex flex-col gap-4">
               <h4 className="font-barlow font-bold uppercase text-white text-3xl md:text-4xl lg:text-5xl tracking-wide text">
-                Contact with Us
+                {/* Contact with Us */}
+                Bizimlə əlaqə qurun
               </h4>
               <p className="mt-2 font-poppins text-gray-400 text-left tracking-wide text-base font-semibold">
                 Excepteur sint occaecat atat non proident, sunt in culpa qui
@@ -46,7 +51,8 @@ const Contact = () => {
                   <PlayIcon className="w-4 h-4 text-primary-green-300" />
                 </div>
                 <h6 className="uppercase font-barlow font-bold text-white text-lg">
-                  INFORMATION
+                  {/* INFORMATION */}
+                  Məlumatlar
                 </h6>
               </div>
               <div className="flex flex-col gap-2">
@@ -57,7 +63,7 @@ const Contact = () => {
                   info@example.com
                 </span>
                 <span className="font-poppins text-gray-400 text-left tracking-wide text-sm font-semibold">
-                  New Central Park W7 Street, New York
+                   Lorem ipsum dolor sit amet, Baku city
                 </span>
               </div>
             </div>
@@ -69,7 +75,7 @@ const Contact = () => {
               <div className="flex items-center gap-4 w-full">
                 <input
                   type="text"
-                  placeholder="Name *"
+                  placeholder="Ad *"
                   className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide capitalize text-white"
                   required
                 />
@@ -82,13 +88,13 @@ const Contact = () => {
                 />
               </div>
               <textarea
-                placeholder="Message *"
+                placeholder="Mesaj *"
                 className="w-full border border-gray-400 border-opacity-20 bg-black-800 p-4 rounded-sm outline-none focus:border-primary-green-300 transition-all duration-700 text-base font-poppins tracking-wide  text-white resize-none h-40"
                 required
               ></textarea>
-              <SubmitBtn value="Submit now" />
+              <SubmitBtn value="Göndər" />
             </form>
-            {isOpen && <Module setIsOpen={setIsOpen} type="message" />}
+            {isOpen && <Module setIsOpen={setIsOpen} type="mesajınız" />}
           </section>
         </Reveal>
       </main>

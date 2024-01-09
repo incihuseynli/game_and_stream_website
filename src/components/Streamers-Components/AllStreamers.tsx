@@ -56,7 +56,7 @@ const AllStreamers = () => {
                   {username}
                 </h6>
                 <span className="text-primary-green-300 font-poppins text-sm font-semibold tracking-wide">
-                  {followers} followers
+                  {followers} izləyici
                 </span>
               </div>
             </NavLink>

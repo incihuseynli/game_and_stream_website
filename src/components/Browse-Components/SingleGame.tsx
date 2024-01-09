@@ -37,7 +37,8 @@ const SingleGame = () => {
     >
       {/* Helmet config */}
       <Helmet>
-        <title>{`${game.title} details`}</title>
+        {/* <title>{`${game.title} details`}</title> */}
+        <title>{`${game.title} detalları`}</title>
         <meta name="description" content={`${game.title} details page`} />
       </Helmet>
       ;{/* Details Section */}
@@ -51,7 +52,9 @@ const SingleGame = () => {
       {/* About Game */}
       <div className="flex flex-col items-center justify-center gap-10">
         <h4 className="text-3xl md:text-4xl text-white font-barlow font-bold tracking-wide">
-          <span className="text-primary-green-500">{game.title}</span> Details
+          <span className="text-primary-green-500">{game.title}</span> {" "}
+          {/* Details */}
+          Oyun Detalları
         </h4>
 
         <div
@@ -107,7 +110,8 @@ const SingleGame = () => {
               ))}
             </p>
 
-            <BtnText children="Download game now" path={game.game_url} />
+            {/* <BtnText children="Download game now" path={game.game_url} /> */}
+            <BtnText children="Oyunu oynamaq üçün keçid et" path={game.game_url} />
           </div>
         </div>
       </div>

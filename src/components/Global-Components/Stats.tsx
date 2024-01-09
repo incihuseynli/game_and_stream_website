@@ -13,7 +13,8 @@ const Stats = () => {
   return (
     <section className="mt-36 mb-24 flex flex-col gap-24">
       {/* Section Head */}
-      <SectionHead headTitle="Our services" title="Just enjoy playing" />
+      {/* <SectionHead headTitle="Our services" title="Just enjoy playing" /> */}
+      <SectionHead headTitle="Bizim xidmətlərimiz" title="oynamaqdan həzz alın" />
       {/* Stats */}
       <Reveal>
         <div

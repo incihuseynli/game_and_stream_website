@@ -16,23 +16,24 @@ const ListSect = () => {
     }));
   };
   return (
-    <TopList secTitle="Top Streamers">
+    // <TopList secTitle="Top Streamers">
+    <TopList secTitle="Ən çox izlənilən yayımçılar">
       {/* List */}
       <StreamersAPI limit={3}>
         {(streamers: IStreamers[]) => (
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 mt-2 mb-5">
             {streamers.map(({ id, username, image }) => {
               const isFollowed = followStates[id] || false;
               return (
                 // ITEM
                 <div
-                  className="w-full flex items-center gap-8 md:gap-16 lg:gap-8 border-b border-b-gray-500 border-opacity-20 last:border-none pb-6"
+                  className="w-full flex items-center gap-8 md:gap-16 lg:gap-12  border-b border-b-gray-500 border-opacity-20 last:border-none pb-6"
                   key={id}
                 >
                   <img
                     src={image}
                     alt={`${username} profile`}
-                    className="w-20 h-20 object-cover rounded-full"
+                    className="w-20 h-20 lg:w-24 lg:h-24 object-cover rounded-full"
                   />
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-2">
@@ -54,7 +55,7 @@ const ListSect = () => {
                         `}
                       onClick={() => toggleFollow(id)}
                     >
-                      {isFollowed ? "Followed" : "Follow"}
+                      {isFollowed ? "İzlənir" : "Izlə"}
                     </button>
                   </div>
                 </div>

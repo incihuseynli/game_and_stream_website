@@ -3,22 +3,24 @@ import SimilarGameSection from "../components/Browse-Components/SimilarGameSecti
 import SingleGame from "../components/Browse-Components/SingleGame";
 import { styles } from "../styles";
 import Reveal from "../transitions/Reveal";
-
+import Navbar from "../components/Header-Components/Navbar";
 const GameDetail = () => {
-
   return (
-    <PageTransition>
-      <main className={`${styles.padding}`}>
-        {/* Game Details Section */}
-        <Reveal>
-          <SingleGame />
-        </Reveal>
-        {/* Similar Games Recomendations Slider */}
-        <Reveal>
-          <SimilarGameSection />
-        </Reveal>
-      </main>
-    </PageTransition>
+    <>
+      <Navbar />
+      <PageTransition>
+        <main className={`${styles.padding}`}>
+          {/* Game Details Section */}
+          <Reveal>
+            <SingleGame />
+          </Reveal>
+          {/* Similar Games Recomendations Slider */}
+          <Reveal>
+            <SimilarGameSection />
+          </Reveal>
+        </main>
+      </PageTransition>
+    </>
   );
 };
 

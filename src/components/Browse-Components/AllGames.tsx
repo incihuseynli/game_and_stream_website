@@ -38,9 +38,13 @@ const AllGames = () => {
   return (
     <section className={`${styles.padding} my-24 flex flex-col gap-16`}>
       {/* Section Head */}
-      <SectionHead
+      {/* <SectionHead
         headTitle="Choose game you want"
         title="All Best Games is in here"
+      /> */}
+      <SectionHead
+        headTitle="Istədiyin oyunu seç"
+        title="Bütün ən yaxşı oyunlar burada"
       />
       {/* All Games */}
       <Reveal>

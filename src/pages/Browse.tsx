@@ -15,18 +15,24 @@ const Browse: FC = () => {
     <PageTransition>
       {/* Helmet config */}
       <Helmet>
-        <title>Browse Games</title>
+        {/* <title>Browse Games</title> */}
+        <title>Oyunlar</title>
         <meta name="description" content="Explore and start play our games" />
       </Helmet>
       {/* Header Section */}
-      <PageHead image={image} pageTitle="Browse Games" />
+      {/* <PageHead image={image} pageTitle="Browse Games" /> */}
+      <PageHead image={image} pageTitle="Oyunlarımız" />
       {/* Main Section*/}
       <main>
         <section className={`mt-28 ${styles.flexCenter} flex-col `}>
           <div className="text-center">
-            <SectionHead
+            {/* <SectionHead
               headTitle="Best of the Best"
               title="Play best games with only bests"
+            /> */}
+            <SectionHead
+              headTitle="Ən yaxşıların ən yaxşısı"
+              title="Ən yaxşı oyunları ən yaxşılarla oynayın"
             />
           </div>
 

@@ -14,16 +14,20 @@ const Streams = () => {
     <PageTransition>
       {/* Helmet config */}
       <Helmet>
-        <title>Streams</title>
+        <title>
+          {/* Streams */}
+          Yayımlar
+          </title>
         <meta name="description" content="Our streams page" />
       </Helmet>
       {/* Header */}
-      <PageHead pageTitle="Streams" image={image} />
+      {/* <PageHead pageTitle="Streams" image={image} /> */}
+      <PageHead pageTitle="Yayımlar" image={image} />
       {/* Main */}
 
       <main>
         <section
-          className={`${styles.paddingX} grid grid-cols-1 lg:grid-cols-browse  gap-6 lg:gap-20 mt-36`}
+          className={`${styles.paddingX} grid grid-cols-1 lg:grid-cols-[750px_450px]  gap-6 lg:gap-20 mt-36`}
         >
           {/* Slider */}
           <SliderSect />
@@ -36,9 +40,13 @@ const Streams = () => {
         <section
           className={`${styles.padding}  my-24 flex flex-col flex-wrap gap-16`}
         >
-          <SectionHead
+          {/* <SectionHead
             headTitle="Enjoy Playing with together"
             title="Most Popular Streamers"
+          /> */}
+          <SectionHead
+            headTitle="Birlikdə oynamaqdan həzz al"
+            title="Ən məşhur yayımçılar"
           />
           {/* ALL STREAMERS */}
           <Reveal>

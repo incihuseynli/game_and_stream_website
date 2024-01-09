@@ -10,20 +10,21 @@ import { Helmet } from "react-helmet";
 const TournamentContent = () => {
   const { id } = useParams<{ id: string }>();
   const URL = "http://localhost:3080/tournaments/";
-  const [tournament, setTournament] = useState<ITournaments>({} as ITournaments);
+  const [tournament, setTournament] = useState<ITournaments>(
+    {} as ITournaments
+  );
+
   useEffect(() => {
     axios.get(URL + id).then(({ data }) => {
       setTournament(data);
-      // console.log(data);
-      
     });
   }, [id]);
 
   return (
-    <section className="py-6 px-8 bg-black-500 w-full  letterCut rounded-sm ">
+    <section className="py-6 px-8 bg-black-500 w-full  letterCut rounded-sm  relative">
       {/* Helmet config */}
       <Helmet>
-        <title>{`${tournament.title} details`}</title>
+        <title>{`${tournament.title} detalları`}</title>
         <meta
           name="description"
           content={`Join to ${tournament.title} tournament now!`}

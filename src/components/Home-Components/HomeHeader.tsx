@@ -22,20 +22,23 @@ const HomeHeader = () => {
             {/* TAG */}
             <div className="w-56 rounded-md p-3 bg-gradient">
               <h6 className="uppercase text-xl font-bold text-primary-green-500 tracking-widest font-barlow">
-                Live Gaming
+                {/* Live Gaming */}
+                Canlı Oyun
               </h6>
             </div>
             {/* HEADING */}
             <div className="flex flex-col gap-5">
               <h1 className="font-playpen text-white uppercase text-5xl lg:text-7xl tracking-wide text-shadow ">
-                Streaming
+                {/* Streaming */}
+                Yayımlar
               </h1>
               <span className="uppercase text-2xl font-poppins tracking-widest text-white font-bold">
-                & online video games
+                {/* & online video games */}
+                və onlayn video oyunlar
               </span>
             </div>
           </div>
-          <Btn children="Explore" path="/browse" />
+          <Btn children="Kəşf et" path="/browse" />
           <div
             className={`${styles.flexBetween} hidden lg:flex  w-full md:w-3/4`}
           >

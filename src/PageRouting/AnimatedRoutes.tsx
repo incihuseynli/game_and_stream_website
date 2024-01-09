@@ -1,20 +1,22 @@
 import { Route, Routes, useLocation } from "react-router";
 import { Paths } from "./Paths";
-import Navbar from "../components/Header-Components/Navbar.tsx";
 import Footer from "../components/Footer-Components/Footer.tsx";
 import { AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
-  const currentRoute = Paths.find((route) => route.path === location.pathname);
-  const showNavbar =
-    currentRoute &&
-    Paths.map(({ title }) => title).includes(currentRoute.title);
 
+
+
+    useEffect(() => {
+      // Scroll to the top of the page whenever the location changes
+      window.scrollTo(0, 0);
+    }, [location.pathname]);
+  
   return (
     <>
-      {/* HEADER */}
-      {!showNavbar && <Navbar />}
+    
       {/* Framer wrapper */}
       <AnimatePresence mode="wait">
         {/* ROUTES */}

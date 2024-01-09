@@ -16,7 +16,8 @@ const SimilarGameSection = () => {
   return (
     <section className="mt-36 flex flex-col items-center gap-16 py-16 bg-black-500 rounded-lg">
       {/* Section Head */}
-      <SectionHead headTitle="Play more" title="similar games" />
+      {/* <SectionHead headTitle="Play more" title="similar games" /> */}
+      <SectionHead headTitle="Daha çox oyna" title="oxşar oyunlar" />
       {/* Slider */}
       <ScrollCarousel autoplay autoplaySpeed={600} speed={2} smartSpeed={true}>
         {[1, 2].map((item) => (
@@ -36,7 +37,8 @@ const SimilarGameSection = () => {
                     <h6 className="text-lg font-barlow font-bold text-white  w-fit truncate">
                       {title}
                     </h6>
-                    <BtnText children="play now" path={`/browse/${id}`} />
+                    {/* <BtnText children="play now" path={`/browse/${id}`} /> */}
+                    <BtnText children="indi oyna" path={`/browse/${id}`} />
                   </div>
                 </div>
               );

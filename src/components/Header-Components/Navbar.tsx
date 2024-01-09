@@ -13,13 +13,13 @@ import { useAuth } from "../ContextAPI/AuthContext";
 import logo from "/logo.png";
 import clickBtn from "/click1.mp3";
 import image from "/streamer1.png";
-import logoMobile from "/logo2.png"
+import logoMobile from "/logo2.png";
+
 const Header = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1024px)");
   const isAboveSmallScreens = useMediaQuery("(min-width:768px)");
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { isLogged, handleLogout } = useAuth();
-
   const logout = () => {
     handleLogout();
     clickSound();
@@ -68,14 +68,16 @@ const Header = () => {
                       <div className="flex flex-col">
                         <div className="flex">
                           <p className=" text-white text-[10px] font-medium first-letter:text-primary-green-500">
-                            Game &
+                            {/* Game & */}
+                            Oyun və
                           </p>
                           <p className="text-white text-[10px] font-medium first-letter:text-primary-green-500">
-                            &nbsp;Streaming
+                            &nbsp;Yayım
+                            {/* Streaming */}
                           </p>
                         </div>
                         <p className="tracking-wider text-lg -mt-1 font-medium text-primary-green-500 ">
-                          Platform
+                          Platforması
                         </p>
                       </div>
                     </div>
@@ -117,7 +119,8 @@ const Header = () => {
               } text-center text-white text-lg uppercase font-medium tracking-wider`}
             >
               {isAboveSmallScreens ? (
-                "Sign in"
+                // "Sign in"
+                "Giriş"
               ) : (
                 <div className="text-primary-green-500">
                   <ArrowLeftOnRectangleIcon />

@@ -36,14 +36,18 @@ const StreamerSlider = () => {
                     {username}
                   </h4>
                   <span className="text-xs text-gray-50 font-bold font-poppins -tracking-wide">
-                    Total followers :{" "}
+                    {/* Total followers :{" "} */}
+                    İzləyici sayı : {" "}
                     <span className="text-secondary-yellow-500">
                       {followers}
                     </span>
                   </span>
                 </div>
                 <div className="mb-4">
-                <BtnText path={`/streams/${id}`}>Explore</BtnText>
+                <BtnText path={`/streams/${id}`}>
+                  {/* Explore */}
+                  Kəşf et
+                  </BtnText>
                 </div>
               </div>
             );

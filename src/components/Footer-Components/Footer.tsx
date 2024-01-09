@@ -50,7 +50,8 @@ const Footer = () => {
         {/* Quick Menu */}
         <div className={`${styles.flexCenter}  flex-col gap-6`}>
           <h5 className="text-2xl font-barlow font-bold text-gray-50 uppercase tracking-wider">
-            QUICK LINKS
+            {/* QUICK LINKS */}
+            Menu keçidləri
           </h5>
           <ul className={`${styles.flexCenter} flex-col gap-2`}>
             <NavLinks />
@@ -59,19 +60,23 @@ const Footer = () => {
         {/* Newsletter */}
         <div className={`${styles.flexCenter} sm:items-start flex-col gap-6`}>
           <h5 className="text-2xl font-barlow font-bold text-gray-50 uppercase tracking-wider">
-            Newsletter
+            {/* Newsletter */}
+            Bizdən xəbər tutun
           </h5>
           <p className=" w-4/5  text-center text-gray-50 text-sm font-medium sm:text-left">
-            Subscribe our newsletter to get our latest update & news
+            {/* Subscribe our newsletter to get our latest update & news */}
+            Ən son yeniləmələrimizi və xəbərlərimizi əldə etmək üçün
+            bülletenimizə abunə olun.
           </p>
           <div className="w-3/4 h-10 rounded-md flex  bg-black-500">
             <input
               type="email"
               name="email"
               id="email"
-              placeholder="Get News & Updates"
+              // placeholder="Get News & Updates"
+              placeholder="Yeniliklərdən xəbərdar olun"
               className=" text-sm text-white
-             flex-1 bg-transparent outline-none border-none h-full p-4
+             flex-1 bg-black-800 bg-opacity-20 rounded-s-sm outline-none border-none h-full p-4
              "
             />
             <button
@@ -84,7 +89,8 @@ const Footer = () => {
           </div>
           <div className="font-medium tracking-wide flex flex-col gap-2">
             <span className="flex gap-2 items-center text-base capitalize text-white">
-              Phone:
+              {/* Phone: */}
+              Telefon:
               <span className="text-sm text-gray-50">+012 234 54 89</span>
             </span>
             <span className="flex gap-2 items-center text-base capitalize text-white">
@@ -101,22 +107,25 @@ const Footer = () => {
         className={`${styles.flexBetween} flex-col sm:flex-row sm:items-start items-center w-full border-t border-gray-500 py-4`}
       >
         <p className="text-sm text-gray-50 uppercase tracking-wider">
-          COPYRIGHT © 2023 - ALL RIGHTS RESERVED.
+          COPYRIGHT © 2023 - Bütün hüquqlar qorunur.
+          {/* COPYRIGHT © 2023 - ALL RIGHTS RESERVED. */}
         </p>
 
-        <div className={`${styles.flexBetween} w-56`}>
+        <div className={`${styles.flexBetween} w-56 mr-8`}>
           <Link
             to="/"
-            className="text-sm text-gray-50 uppercase tracking-wider hover:underline hover:underline-offset-4 transition-all duration-300 "
+            className="text-xs text-gray-50 uppercase tracking-wider hover:underline hover:underline-offset-4 transition-all duration-300 "
           >
-            Terms & Policy
+            {/* Terms & Policy */}
+            Şərtlər & Qaydalar
           </Link>
           <p className="text-gray-50">|</p>
           <Link
             to="/"
-            className="text-sm text-gray-50 uppercase tracking-wider hover:underline hover:underline-offset-4 transition-all duration-300 "
+            className="text-xs text-gray-50 uppercase tracking-wider hover:underline hover:underline-offset-4 transition-all duration-300 "
           >
-            Privacy
+            {/* Privacy */}
+            Məxfilik
           </Link>
         </div>
       </div>

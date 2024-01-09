@@ -10,36 +10,40 @@ import StreamerDetails from "../pages/StreamerDetails";
 import PageNotFound from "../pages/PageNotFound";
 import Auth from "../pages/Auth";
 import PasswordRepair from "../components/Auth-Components/PasswordRepair";
+
 export const Paths: RoutesType = [
   {
     id: 1,
     path: "/",
     element: <Home />,
-    title: "Home",
+    // title: "Home",
+    title: "Əsas Səhifə",
   },
   {
     id: 2,
     path: "/browse",
     element: <Browse />,
-    title: "Browse",
+    // title: "Browse",
+    title: "Oyunlar",
   },
   {
     id: 3,
     path: "/tournament",
     element: <Tournament />,
-    title: "Tournament",
+    // title: "Tournament",
+    title: "Müsabiqələr",
   },
   {
     id: 4,
     path: "/streams",
     element: <Streams />,
-    title: "Streams",
+    title: "Yayımlar",
   },
   {
     id: 5,
     path: "/contact",
     element: <Contact />,
-    title: "Contact",
+    title: "Əlaqə",
   },
   {
     id: 6,

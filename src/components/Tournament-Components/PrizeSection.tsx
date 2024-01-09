@@ -10,7 +10,8 @@ const PrizeSection = () => {
         className={`${styles.padding} ${styles.flexCenter} flex-col gap-20 my-24`}
       >
         {/* Section Head */}
-        <SectionHead headTitle="OUR TOURNAMENT" title="PLAY TO EARN GAMES" />
+        {/* <SectionHead headTitle="OUR TOURNAMENTS" title="PLAY TO EARN GAMES" /> */}
+        <SectionHead headTitle="Yarışlarımız" title="Qazanmaq üçün oyna" />
         {/* Prizes Cards */}
         <div className="mt-12 grid grid-cols-1  lg:grid-cols-3 place-items-center gap-12  lg:gap-6">
           {/* Prize Card */}

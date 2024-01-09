@@ -18,7 +18,8 @@ const TrendingMatches = () => {
       <div className="flex items-center gap-2 bg-gray-800 py-6 px-4 bg-opacity-40">
         <PlayIcon className="w-4 h-4 text-primary-green-300" />
         <h6 className="font-barlow font-bold text-white text-xl uppercase">
-          TRENDING MATCHES
+          {/* TRENDING MATCHES */}
+          Trend Yarışlar
         </h6>
       </div>
       <div className="flex flex-col gap-2 py-4">

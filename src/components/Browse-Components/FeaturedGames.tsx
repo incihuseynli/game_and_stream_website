@@ -18,7 +18,8 @@ const FeaturedGames = () => {
     });
   }, []);
   return (
-    <SmallSlider secTitle="Streamer Featured Games">
+    // <SmallSlider secTitle="Streamer Featured Games">
+    <SmallSlider secTitle="Yayımçılar tərəfindən seçilmişlər">
       {streamers.map(
         ({
           id,

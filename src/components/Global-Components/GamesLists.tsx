@@ -62,7 +62,10 @@ const GamesLists = () => {
                           {publisher}
                         </h5>
                       </div>
-                      <BtnText path={`/browse/${id}`}>More Details</BtnText>
+                      <BtnText path={`/browse/${id}`}>
+                        {/* More Details */}
+                        Daha ətraflı
+                      </BtnText>
                     </div>
                   </div>
                 );
