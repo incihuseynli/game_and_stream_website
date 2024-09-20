@@ -1038,7 +1038,7 @@
       "title": "ArcheAge Müsabiqəsi",
       "status": "uğurlu kard",
       "place_count": 10,
-      "endDate": "2024-05-31T23:59:59Z",
+      "endDate": "2025-05-31T23:59:59Z",
       "content": "Excepteur sint occaecat atat non proident, sunt in culpa qui officia deserunt mollit anim id est labor umLor em ipsum dolor amet consteur adiscing Duis elentum solliciin is yaugue euismods Nulla ullaorper. Ipsum is simply dummy text of printing and typeetting industry. Lorem Ipsum has been the industry's standsaard sipiscing Duis elementum solliciin. Duis aute irure dolor in repderit in voluptate velit esse cillum dolorliq commodo consequat.",
       "quote": "Duis elentum solliciin is yaugue euismods Nulla ullaorper. Ipsum is simply dummy text of printing and typeetting industry.",
       "promo": "https://www.youtube.com/watch?v=r6LxWRdXaJs",
@@ -1228,6 +1228,13 @@
       "email": "test5@email.com",
       "birthDate": "2024-01-09",
       "id": 13
+    },
+    {
+      "username": "test",
+      "password": "test123",
+      "email": "test1@example.com",
+      "birthDate": "2024-09-15",
+      "id": 14
     }
   ]
 }
