@@ -50,7 +50,7 @@ const GameSlider = () => {
           "--swiper-pagination-bullet-border-radius": "0",
           "--swiper-pagination-color": "#45f983",
           "--swiper-pagination-bullet-inactive-color": "#3fde77",
-        }}
+        } as React.CSSProperties}
       >
         {games.map(({ id, thumbnail, title, ratePer }) => {
           return (

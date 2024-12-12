@@ -46,7 +46,7 @@ export interface IGame {
   genre: string;
   rate: number | string;
   age_rate: number | string;
-  downloads: number | string;
+  downloads: string;
   storage: number | string;
   content: string;
   smallImgs: nestedGames[];

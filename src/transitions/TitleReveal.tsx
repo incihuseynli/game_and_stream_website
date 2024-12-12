@@ -1,9 +1,11 @@
 import { motion, useInView, useAnimation } from "framer-motion";
 import "../index.css";
-import { ReactNode, useEffect, useRef } from "react";
+import React, { ReactNode, ReactElement, useEffect, useRef } from "react";
+
 interface IProps {
   children: ReactNode;
 }
+
 const TitleReveal = ({ children }: IProps) => {
   const animationRef = useRef(null);
   const isInView = useInView(animationRef, { once: true });
@@ -31,15 +33,25 @@ const TitleReveal = ({ children }: IProps) => {
       {letter}
     </motion.span>
   );
-  const textContent =
-    typeof children === "string"
-      ? children
-      : children.props && children.props.children;
+
+  // Extract text content
+  let textContent: string | undefined = undefined;
+
+  if (typeof children === "string") {
+    textContent = children; // Directly use if it's a string
+  } else if (React.isValidElement(children)) {
+    // If it's a valid React element, try to access its children
+    const innerChildren = children.props.children;
+    if (typeof innerChildren === "string") {
+      textContent = innerChildren;
+    }
+  }
+
   return (
     <div
       ref={animationRef}
       className="relative overflow-hidden"
-      style={{ width: "fit" || "100%" }}
+      style={{ width: "fit"   }}
     >
       {textContent &&
         textContent
