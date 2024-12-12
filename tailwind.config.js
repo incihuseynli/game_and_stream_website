@@ -5,8 +5,8 @@ export default {
     extend: {
       backgroundImage: {
         'hero' : 'url("./heroBG.png")',
-        'streamers' : 'url("./bgImg1.png")',
-        'pageHero' : 'url("./bgHero.jpg")',
+        'streamers' : 'url("./src/assets/images/bgImg1.png")',
+        'pageHero' : 'url("./src/assets/images/bgHero.jpg")',
         'streamer' : "url('./bgStreamer.jpg')",
       },
       gridTemplateColumns: {
