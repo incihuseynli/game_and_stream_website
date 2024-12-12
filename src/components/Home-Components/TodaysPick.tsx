@@ -7,7 +7,8 @@ import Axios from "axios";
 import Reveal from "../../transitions/Reveal";
 
 const TodaysPick = () => {
-  const URL = "http://localhost:3080/todaysPick?_limit=1";
+  // const URL = "http://localhost:3080/todaysPick?_limit=1";
+  const URL = "https://my-json-server.typicode.com/dbForProjects/todaysPickDb/todaysPick";
   const [games, setGames] = useState<ITodaysPick[]>([]);
   const handleData = () => {
     try {

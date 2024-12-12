@@ -5,7 +5,8 @@ import Axios from "axios";
 import ScrollCarousel from "scroll-carousel-react";
 
 const StreamerSlider = () => {
-  const URL = "http://localhost:3080/streamers";
+  // const URL = "http://localhost:3080/streamers";
+  const URL = "https://my-json-server.typicode.com/dbForProjects/streamersDb/streams";
   const [streamers, setStreamers] = useState<IStreamers[]>([]);
   const handleData = () => {
     Axios.get(URL).then(({ data }) => {

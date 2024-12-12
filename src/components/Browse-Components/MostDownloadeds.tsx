@@ -12,7 +12,8 @@ import { NavLink } from "react-router-dom";
 
 const MostDownloadeds = () => {
   const limit = 3;
-  const URL = `http://localhost:3080/games?_limit=${limit}`;
+  // const URL = `http://localhost:3080/games?_limit=${limit}`;
+  const URL = `https://my-json-server.typicode.com/dbForProjects/games_api/games?_limit=${limit}`;
   const [games, setGames] = useState<IGame[]>([]);
   const handleData = () => {
     try {

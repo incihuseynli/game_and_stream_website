@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 
 const AllStreamers = () => {
-  const URL = "http://localhost:3080/streamers";
+  // const URL = "http://localhost:3080/streamers";
+  const URL = "https://my-json-server.typicode.com/dbForProjects/streamersDb/streams";
   const [streamers, setStreamers] = useState<IStreamers[]>([]);
   const handleData = () => {
     try {

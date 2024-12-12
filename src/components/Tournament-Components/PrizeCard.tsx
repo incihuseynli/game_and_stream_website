@@ -6,7 +6,8 @@ import { ITournaments } from "../../types";
 import BtnText from "../Buttons/BtnText";
 
 const PrizeCard = () => {
-  const URL = "http://localhost:3080/tournaments";
+  // const URL = "http://localhost:3080/tournaments";
+  const URL = "https://my-json-server.typicode.com/dbForProjects/tournaments/tournaments";
   const [tournaments, setTournaments] = useState<ITournaments[]>([]);
   useEffect(() => {
     axios.get(URL).then(({ data }) => {

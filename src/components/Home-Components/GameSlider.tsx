@@ -10,7 +10,8 @@ import { useEffect, useState } from "react";
 import { IGame } from "../../types";
 import Axios from "axios";
 const GameSlider = () => {
-  const URL = "http://localhost:3080/games?_limit=6";
+  // const URL = "http://localhost:3080/games?_limit=6";
+  const URL = "https://my-json-server.typicode.com/dbForProjects/games_api/games?_limit=4";
   const [games, setGames] = useState<IGame[]>([]);
   const handleData = () => {
     try {

@@ -9,7 +9,8 @@ import { Helmet } from "react-helmet";
 
 const TournamentContent = () => {
   const { id } = useParams<{ id: string }>();
-  const URL = "http://localhost:3080/tournaments/";
+  // const URL = "http://localhost:3080/tournaments/";
+  const URL = "https://my-json-server.typicode.com/dbForProjects/tournaments/tournaments";
   const [tournament, setTournament] = useState<ITournaments>(
     {} as ITournaments
   );

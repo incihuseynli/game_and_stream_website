@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { GamesAPIProps, IGame } from "../types";
 
 const GamesAPI: React.FC<GamesAPIProps> = ({ limit, children }) => {
-  const URL = `http://localhost:3080/games?_limit=${limit}`;
+  const URL = `https://my-json-server.typicode.com/dbForProjects/games_api/games?_limit=${limit}`;
+  // const URL = `http://localhost:3080/games?_limit=${limit}`;
   // `https://my-json-server.typicode.com/dbForProjects/games_api/games?_limit=${limit}`;
   const [games, setGames] = useState<IGame[]>([]);
   const handleData = () => {

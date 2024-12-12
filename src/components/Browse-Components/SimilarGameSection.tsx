@@ -6,7 +6,8 @@ import { IGame } from "../../types";
 import axios from "axios";
 
 const SimilarGameSection = () => {
-  const URL = "http://localhost:3080/games";
+  // const URL = "http://localhost:3080/games";
+  const URL = "https://my-json-server.typicode.com/dbForProjects/games_api/games";
   const [games, setGames] = useState<IGame[]>([]);
   useEffect(() => {
     axios.get(URL).then(({ data }) => {

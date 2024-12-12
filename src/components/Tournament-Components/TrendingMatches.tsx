@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import { ITournaments } from "../../types";
 import axios from "axios";
 const TrendingMatches = () => {
-  const URL = "http://localhost:3080/tournaments?_limit=3";
+  // const URL = "http://localhost:3080/tournaments?_limit=3";
+  const URL = "https://my-json-server.typicode.com/dbForProjects/tournaments/tournaments?_limit=3";
   const [tournaments, setTournaments] = useState<ITournaments[]>([]);
   useEffect(() => {
     axios.get(URL).then(({ data }) => {

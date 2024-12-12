@@ -5,8 +5,8 @@ import Axios from "axios";
 const StreamersAPI: React.FC<StreamsAPIProps> = ({ limit, children }) => {
   const URL =
     limit && limit > 0
-      ? `http://localhost:3080/streamers?_limit=${limit}`
-      : "http://localhost:3080/streamers";
+      ? `https://my-json-server.typicode.com/dbForProjects/streamersDb/streams?_limit=${limit}`
+      : "https://my-json-server.typicode.com/dbForProjects/streamersDb/streams";
   // console.log(URL);
 
   const [streamers, setStreamers] = useState<IStreamers[]>([]);

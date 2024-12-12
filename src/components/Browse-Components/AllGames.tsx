@@ -9,7 +9,8 @@ import Reveal from "../../transitions/Reveal";
 
 const AllGames = () => {
   const limit = 6;
-  const URL = `http://localhost:3080/games`;
+  // const URL = `http://localhost:3080/games`;
+  const URL = `https://my-json-server.typicode.com/dbForProjects/games_api/games`;
   const [games, setGames] = useState<IGame[]>([]);
   const handleData = () => {
     try {

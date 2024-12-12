@@ -10,7 +10,8 @@ import { IStreamers } from "../../types";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 const FeaturedGames = () => {
-  const URL = "http://localhost:3080/streamers";
+  // const URL = "http://localhost:3080/streamers";
+  const URL = "https://my-json-server.typicode.com/dbForProjects/streamersDb/streams";
   const [streamers, setStreamers] = useState<IStreamers[]>([]);
   useEffect(() => {
     axios.get(URL).then(({ data }) => {

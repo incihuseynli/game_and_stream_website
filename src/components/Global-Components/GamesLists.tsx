@@ -8,7 +8,7 @@ import { IGame } from "../../types";
 const GamesLists = () => {
   return (
     <>
-      <GamesAPI limit={6}>
+      <GamesAPI limit={3}>
         {(games: IGame[]) => (
           <>
             {games.map(
