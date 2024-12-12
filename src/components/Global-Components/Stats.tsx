@@ -8,6 +8,7 @@ import { stats } from "../../Db/datas";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Stats = () => {
+  const ScrollTriggerComponent = ScrollTrigger as any;
   const [counterOn, setCounterOn] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width:1040px)");
   return (
@@ -39,7 +40,7 @@ const Stats = () => {
                   className="w-10 h-10"
                 />
 
-                <ScrollTrigger
+                <ScrollTriggerComponent
                   onEnter={() => setCounterOn(true)}
                   onExit={() => setCounterOn(false)}
                 >
@@ -49,7 +50,7 @@ const Stats = () => {
                     )}
                     +
                   </span>
-                </ScrollTrigger>
+                </ScrollTriggerComponent>
                 <h6 className="text-base text-gray-300 uppercase">{title}</h6>
               </div>
             );
