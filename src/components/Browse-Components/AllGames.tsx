@@ -8,7 +8,7 @@ import Axios from "axios";
 import Reveal from "../../transitions/Reveal";
 
 const AllGames = () => {
-  const limit = 6;
+  const limit = 3;
   // const URL = `http://localhost:3080/games`;
   const URL = `https://my-json-server.typicode.com/dbForProjects/games_api/games`;
   const [games, setGames] = useState<IGame[]>([]);
