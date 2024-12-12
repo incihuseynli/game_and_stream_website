@@ -99,7 +99,7 @@ export interface IDate {
 }
 
 export interface IStreamers {
-  id: string | number;
+  id:  number;
   username: string;
   image: string;
   followers: string | number;

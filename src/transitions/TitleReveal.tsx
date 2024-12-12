@@ -1,6 +1,6 @@
 import { motion, useInView, useAnimation } from "framer-motion";
 import "../index.css";
-import React, { ReactNode, ReactElement, useEffect, useRef } from "react";
+import React, { ReactNode, useEffect, useRef } from "react";
 
 interface IProps {
   children: ReactNode;
