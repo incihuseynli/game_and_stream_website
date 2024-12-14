@@ -4,7 +4,7 @@ import HeroSect from "../Global-Components/HeroSect";
 import Navbar from "./Navbar";
 const Header = ({children}:IChildren) => {
   return (
-    <header className="bg-pageHero bg-center bg-cover bg-no-repeat">
+    <header className="bg-[url('./bgHero.jpg')] bg-center bg-cover bg-no-repeat">
       <Navbar />
       <HeroSect>
         <section

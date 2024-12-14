@@ -17,7 +17,7 @@ const TournamentsList = () => {
   }, []);
   return (
     <section
-      className={`${styles.paddingX} py-16 ${styles.flexCenter} font-barlow w-full flex-col gap-12 bg-streamers bg-no-repeat bg-cover bg-center  bg-opacity-60`}
+      className={`${styles.paddingX} py-16 ${styles.flexCenter} font-barlow w-full flex-col gap-12 bg-[url('./bgImg1.png')] bg-no-repeat bg-cover bg-center  bg-opacity-60`}
     >
       {/* Section Head */}
       {/* <SectionHead headTitle="TOURNAMENT LIST" title="ACTIVE TOURNAMENTS" /> */}
