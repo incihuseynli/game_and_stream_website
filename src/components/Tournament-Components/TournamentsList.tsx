@@ -16,8 +16,9 @@ const TournamentsList = () => {
     });
   }, []);
   return (
+    // bg-[url('./images/bgImg1.png')] bg-no-repeat bg-cover bg-center  bg-opacity-60
     <section
-      className={`${styles.paddingX} py-16 ${styles.flexCenter} font-barlow w-full flex-col gap-12 bg-[url('./images/bgImg1.png')] bg-no-repeat bg-cover bg-center  bg-opacity-60`}
+      className={`${styles.paddingX} py-16 ${styles.flexCenter} font-barlow w-full flex-col gap-12 bg-black-500`}
     >
       {/* Section Head */}
       {/* <SectionHead headTitle="TOURNAMENT LIST" title="ACTIVE TOURNAMENTS" /> */}

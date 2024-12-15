@@ -3,9 +3,10 @@ import SectionHead from "../Global-Components/SectionHead";
 import StreamerSlider from "./StreamerSlider";
 
 const StreamersList = () => {
+  // bg-no-repeat bg-cover bg-center  bg-opacity-60
   return (
     <section
-      className={`my-36 bg-[url('./images/bgImg1.png')] bg-no-repeat bg-cover bg-center  bg-opacity-60  ${styles.paddingY}`}
+      className={`my-36 bg-black-500   ${styles.paddingY}`}
     >
       {/* Section Head */}
       {/* <SectionHead headTitle="Become a Legend" title="Our Top Streamers" /> */}
